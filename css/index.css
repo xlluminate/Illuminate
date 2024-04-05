@@ -68,6 +68,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: undereline;
+}
 .noto-serif-font {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
