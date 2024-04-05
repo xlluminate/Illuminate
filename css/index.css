@@ -75,5 +75,9 @@ a {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    color: #6495ED; /* Medium blue for anchor */
+    color: #4169E1; /* Dark blue for links */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
