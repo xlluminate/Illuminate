@@ -85,7 +85,7 @@ footer {
     font-variation-settings:
         "wdth" 100;
 }
-p {
+h1, p {
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
     font-weight: 500;
