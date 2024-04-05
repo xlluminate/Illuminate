@@ -48,13 +48,9 @@ header {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    height: 10px;
-    line-height: 10px;
 }
 .play-button:hover {
     background-color: #3d64c7; /* Darker shade on hover */
-    height: 10px;
-    line-height: 10px;
 }
 footer {
     background-color: #6495ED; /* Medium blue for footer */
