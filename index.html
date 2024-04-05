@@ -16,9 +16,12 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="projects.html">Games</a></li>
+                <li><a href="proxies.html">Proxies</a></li>
+                <li><a href="cheats.html">Cheats</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="proxies.html">Proxy</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="request.html">Request</a></li>
                 <li><a href="settings.html">Settings</a></li>
             </ul>
         </nav>
@@ -29,6 +32,7 @@
         <button class="play-button" onclick="redirect_proxies()">Proxies</button><br />
         <button class="play-button" onclick="redirect_cheats()">Cheats and Hacks</button><br />
         <button class="play-button" onclick="redirect_other()">Other Stuff</button><br />
+        <button class="play-button" onclick="redirect_settings()">Settings</button><br />
     </div>
     <footer>
         <p>&copy; 2024 Untitled. All rights reserved.</p>
@@ -40,6 +44,9 @@
         }
         function redirect_proxies() {
             window.location.href="proxies.html"
+        }
+        function redirect_settings() {
+            window.location.href="settings.html"
         }
         function redirect_cheats() {
             window.location.href="cheats.html"
