@@ -23,10 +23,13 @@
             </ul>
         </nav>
         <h1>Untitled Game Site</h1><br />
-        <button class="play-button" onclick="redirect_games()">Get Started</button>
         <br />
     </header>
     <div class="container">
+        <button class="play-button" onclick="redirect_games()">Get Started</button><br />
+        <button class="play-button" onclick="redirect_proxies()">Proxies</button><br />
+        <button class="play-button" onclick="redirect_cheats()">Cheats and Hacks</button><br />
+        <button class="play-button" onclick="redirect_other()">Other Stuff</button><br />
         <!-- Main section content goes here -->
     </div>
     <footer>
@@ -36,6 +39,15 @@
     <script>
         function redirect_games() {
             window.location.href="projects.html"
+        }
+        function redirect_proxies() {
+            window.location.href="proxies.html"
+        }
+        function redirect_cheats() {
+            window.location.href="cheats.html"
+        }
+        function redirect_other() {
+            window.location.href="other/index.html"
         }
     </script>
 </body>
