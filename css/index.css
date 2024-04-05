@@ -112,6 +112,3 @@ spacer {
 .center {
     text-align: center;
 }
-.center, p {
-    color: #6495ED; /* Medium blue for paragraphs */
-}
