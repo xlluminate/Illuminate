@@ -10,30 +10,26 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-footer {
-    background-color: #6495ED; /* Medium blue for footer */
-    color: white;
+.top-nav {
+    background-color: #4169E1; /* Dark blue for navigation bar */
     padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
-.container {
-    max-width: 800px;
-    margin: 50px auto;
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
-.play-button {
-    background-color: #4169E1; /* Darker blue for play button */
+.top-nav ul li {
+    display: inline;
+}
+.top-nav ul li a {
     color: white;
-    padding: 15px 40px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
-.play-button:hover {
+.top-nav ul li a:hover {
     background-color: #3d64c7; /* Darker shade on hover */
 }
