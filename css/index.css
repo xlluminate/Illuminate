@@ -68,3 +68,12 @@ footer {
   font-variation-settings:
     "wdth" 100;
 }
+a {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: #6495ED; /* Medium blue for anchor */
+}
