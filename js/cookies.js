@@ -1,7 +1,7 @@
 // --- Config --- //
 var cookiePopupTitle = "Cookies";
 var cookiePopupDesc = "This site uses cookies!";
-var cookiePopupLink = 'By using this website, you consent to the use of these cookies and our <a href="/other/terms.html" target="_blank">Terms of Use.</a> If you want to learn more about this, <a href="/other/cookieinfo.html" target="_blank">click here!</a>';
+var cookiePopupLink = 'By using this website, you consent to the use of these cookies and our <a href="other/terms.html" target="_blank">Terms of Use.</a> If you want to learn more about this, <a href="other/cookieinfo.html" target="_blank">click here!</a>';
 var cookiePopupButton = "I Agree";
 
 function pureFadeIn(elem, display) {
