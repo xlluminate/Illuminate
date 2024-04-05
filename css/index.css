@@ -7,7 +7,7 @@ body {
 header {
     background-color: #6495ED; /* Medium blue for header */
     color: white;
-    padding: 0;
+    padding: 1px;
     text-align: center;
 }
 .top-nav {
