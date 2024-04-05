@@ -60,6 +60,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.footer {
+    background-color: #6495ED; /* Medium blue for footer */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
 .noto-serif-font {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
