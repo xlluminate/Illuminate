@@ -22,8 +22,8 @@
                 <li><a href="settings.html">Settings</a></li>
             </ul>
         </nav>
-        <h1>Untitled Game Site</h1>
-        <button class="play-button">Get Started</button>
+        <h1>Untitled Game Site</h1><br />
+        <button class="play-button" onclick="redirect()">Get Started</button>
     </header>
     <div class="container">
         <!-- Main section content goes here -->
@@ -31,6 +31,11 @@
     <footer>
         <p>&copy; 2024 Untitled. All rights reserved.</p>
     </footer>
-    <script src="js/cookies.js"> </script>
+    <script src="js/cookies.js"></script>
+    <script>
+        function redirect() {
+            window.location.href="projects.html"
+        }
+    </script>
 </body>
 </html>
