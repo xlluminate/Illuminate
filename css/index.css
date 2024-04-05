@@ -92,7 +92,6 @@ h1, h2, h3, h4, h5, h6, p {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    color: #6495ED; /* Medium blue for these tags */
 }
 a {
     font-family: "Noto Serif", serif;
@@ -112,4 +111,7 @@ spacer {
 }
 .center {
     text-align: center;
+}
+.center, p {
+    color: #6495ED; /* Medium blue for paragraphs */
 }
