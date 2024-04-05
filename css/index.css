@@ -85,7 +85,7 @@ footer {
     font-variation-settings:
         "wdth" 100;
 }
-h1, p {
+h1, h2, h3, h4, h5, h6, p {
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -108,4 +108,7 @@ a:hover {
 }
 spacer {
     height: 10px;
+}
+.center {
+    text-align: center;
 }
