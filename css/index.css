@@ -21,11 +21,14 @@ body {
 header {
     background-color: #6495ED; /* Medium blue for header */
     color: white;
-    padding: 20px 0;
+    padding: 1px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
-
+.top-nav {
+    padding: 10px;
+    background-color: #4169E1;
+}
 nav.top-nav ul {
     margin: 0;
     padding: 0;
@@ -47,7 +50,7 @@ nav.top-nav ul li a {
 }
 
 nav.top-nav ul li a:hover {
-    background-color: #4169E1; /* Darker blue on hover */
+    background-color: #3a5dc7; /* Very dark blue on hover */
 }
 
 .container {
