@@ -1,11 +1,23 @@
 /* Shared styles for all pages */
 body {
-    font-family: 'Noto Serif', serif;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300%;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     margin: 0;
     padding: 0;
     background-color: #f0f8ff; /* Light blue background */
 }
-
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 300%;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 header {
     background-color: #6495ED; /* Medium blue for header */
     color: white;
@@ -123,4 +135,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+.center {
+    text-align: center;
 }
