@@ -101,6 +101,16 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
 
+.footer {
+    background-color: #6495ED; /* Medium blue for footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
 a {
     color: #4169E1; /* Darker blue for links */
     text-decoration: none;
