@@ -139,3 +139,6 @@ a:hover {
 .center {
     text-align: center;
 }
+.spacer {
+    height: 300px;
+}
