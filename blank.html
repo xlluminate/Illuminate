@@ -3,24 +3,22 @@
   </head>
   <body>
     <script>
-      var urlObj = new window.URL(window.location.href);
-      var url = "https://literally-no-clue-what-to-name.pages.dev/";
-      if (url) {
-        var win;
-            win = window.open();
-            win.document.body.style.margin = '0';
-            win.document.body.style.height = '100vh';
-            var iframe = win.document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.margin = '0';
-            iframe.src = url;
-            win.document.body.appendChild(iframe);
-          
-        };
-      }
- 
+var siteUrl = "https://literally-no-clue-what-to-name.pages.dev/";
+
+// Open a new window with the specified URL
+var newWindow = window.open("about:blank", "_blank");
+
+// Check if the new window is opened successfully
+if (newWindow) {
+    // When the new window is fully loaded, navigate to the specified site URL
+    newWindow.addEventListener("load", function() {
+        newWindow.location.href = siteUrl;
+    });
+} else {
+    // If the new window couldn't be opened, display an error message
+    alert("Unable to open a new window. Please check your browser settings.");
+}
+
     </script>
   </body>
  
