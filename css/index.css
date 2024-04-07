@@ -8,23 +8,28 @@ body {
         "wdth" 100;
     margin: 0;
     padding: 0;
-    background-color: #f9f871; /* Light yellow background */
+    background-color: #fffff0; /* Light yellow background */
     color: #333333;
 }
-
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 300%;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 header {
-    background-color: #f9f871; /* Light yellow for header */
+    background-color: #e7ed64; /* Medium yellow for header */
     color: #333333;
     padding: 1px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
-
 .top-nav {
     padding: 10px;
-    background-color: #f9f871; /* Light yellow for top navigation */
+    background-color: #dae141;
 }
-
 nav.top-nav ul {
     margin: 0;
     padding: 0;
@@ -37,7 +42,7 @@ nav.top-nav ul li {
 }
 
 nav.top-nav ul li a {
-    color: #333333; /* Dark grey for top navigation links */
+    color: #333333;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 18px;
@@ -46,7 +51,15 @@ nav.top-nav ul li a {
 }
 
 nav.top-nav ul li a:hover {
-    background-color: #f5f56e; /* Lighter shade of yellow on hover */
+    background-color: #b9c73a; /* Very dark yellow on hover */
+}
+
+#subtitle {
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .container {
@@ -56,8 +69,8 @@ nav.top-nav ul li a:hover {
 }
 
 .play-button {
-    background-color: #f5f56e; /* Lighter shade of yellow for play button */
-    color: #333333; /* Dark grey text color */
+    background-color: #dae141; /* Darker yellow for play button */
+    color: #333333;
     padding: 15px 40px;
     font-size: 20px;
     border: none;
@@ -67,15 +80,20 @@ nav.top-nav ul li a:hover {
     transition: background-color 0.3s ease;
     text-align: center;
     transform: translateX(0px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
 
 .play-button:hover {
-    background-color: #f0f871; /* Slightly darker shade of yellow on hover */
+    background-color: #c4c73d; /* Darker shade on hover */
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
 .game-item {
-    background-color: #ffffff; /* White background for game items */
+    background-color: #fff; /* White background for game items */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
     overflow: hidden;
@@ -84,12 +102,23 @@ nav.top-nav ul li a:hover {
 
 .game-item:hover {
     transform: translateY(-5px) scale(1.02); /* Scaling up slightly on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover */
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.game-item h3 {
+    margin: 20px 0;
+    color: #6495ED;
 }
 
 footer {
-    background-color: #f9f871; /* Light yellow for footer */
-    color: #333333; /* Dark grey text color */
+    background-color: #e7ed64; /* Medium yellow for footer */
+    color: #333333;
     padding: 10px 0;
     text-align: center;
     position: fixed;
@@ -98,20 +127,55 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
 
+.footer {
+    background-color: #e7ed64; /* Medium yellow for footer */
+    color: #333333;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
 .footer a {
-    color: #333333; /* Dark grey text color */
+    color: #333333;
     text-decoration: none;
 }
-
 .footer a:hover {
     text-decoration: underline;
 }
-
 a {
-    color: #f5f56e; /* Lighter shade of yellow for links */
+    color: #666600;
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
+}
+.center {
+    text-align: center;
+}
+.spacer {
+    height: 500px;
+}
+input#search {
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #e7ed64; /* Medium yellow for search bar */
+    color: #333333;
+    transform: translateX(15px);
+}
+input#search:focus {
+    outline: none;
+}
+button {
+    transform: translateX(-20px);
+    background-color: white;
+    border: 0px;
+}
+button:hover {
+    cursor: pointer;
+}
+.card {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
 }
