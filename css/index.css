@@ -64,7 +64,7 @@ nav.top-nav ul li a:hover {
 }
 
 .play-button {
-    background-color: #ffffff; /* White for play button */
+    background-color: #ffffcc; /* Pale yellow for play button */
     color: #333333;
     padding: 15px 40px;
     font-size: 20px;
@@ -78,7 +78,7 @@ nav.top-nav ul li a:hover {
 }
 
 .play-button:hover {
-    background-color: #f0f0f0; /* Lighter shade of grey on hover */
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
     color: #666666; /* Darker grey text color on hover */
     border-color: #cccccc; /* Darker grey border color on hover */
 }
@@ -167,8 +167,4 @@ input#search:focus {
 button {
     transform: translateX(-20px);
     background-color: #ffffff; /* White for button */
-    border: 0px;
-}
-button:hover {
-    cursor: pointer;
-}
+    border: 0
