@@ -171,3 +171,6 @@ button {
     background-color: white;
     border: 0px;
 }
+button:hover {
+    cursor: pointer;
+}
