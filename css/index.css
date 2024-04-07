@@ -54,6 +54,14 @@ nav.top-nav ul li a:hover {
     background-color: #3a5dc7; /* Very dark blue on hover */
 }
 
+#subtitle {
+  font-size: 24px;
+  color: #c9c9c9;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .container {
     max-width: 800px;
     margin: 50px auto;
