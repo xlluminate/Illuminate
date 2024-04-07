@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f8ff; /* Light blue background */
+    color: #333333;
 }
 .noto-serif-font {
   font-family: "Noto Serif", serif;
@@ -144,4 +145,19 @@ a:hover {
 }
 .spacer {
     height: 500px;
+}
+input#search {
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #6495ED; /* Medium blue for search bar */
+    color: #333333;
+    transform: translateX(20px);
+}
+input#search:focus {
+    outline: none;
+}
+button {
+    transform: translateX(-20px);
+    background-color: white;
+    border: 0px;
 }
