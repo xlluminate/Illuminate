@@ -78,6 +78,7 @@ nav.top-nav ul li a:hover {
     border-radius: 5px;
     margin: 10px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .play-button:hover {
