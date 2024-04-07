@@ -1,0 +1,48 @@
+var allElements = [];
+for (let i = 0; i < 624; i++) {
+    allElements.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
+    document.querySelector('.card').remove();
+}
+//document.querySelector('#games').innerHTML = allElements;
+function writeAll() {
+    for (let i = 0; i < allElements.length; i++) {
+        document.querySelector('#games').innerHTML += allElements[i];
+    }
+}
+var elements = [];
+var elementsNew = [];
+function writeNew() {
+    for (let i = 0; i < elementsNew.length; i++) {
+        document.querySelector('#games').innerHTML += elementsNew[i];
+    }
+}
+writeAll();
+function search() {
+    document.querySelector('#games').innerHTML = '';
+    writeAll();
+    value = document.getElementById('search').value;
+    elements = [];
+    elementsNew = [];
+    console.log(document.querySelector('.card').textContent);
+    if (!(value == '')) {
+        for (let i = 0; i < 624; i++) {
+            console.log(document.querySelector('.card').textContent.includes(value));
+            if (document.querySelector('.card').textContent.includes(value)) {
+                //document.querySelector('.card').style.display = 'block';
+                elementsNew.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
+                document.querySelector('.card').remove();
+            } else {
+                //document.querySelector('.card').style.display = 'none';
+                elements.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
+                document.querySelector('.card').remove();
+            }
+        }
+        //document.querySelector('#games').innerHTML = elementsNew;
+        document.querySelector('#games').innerHTML = '';
+        writeNew();
+    } else {
+        //document.querySelector('#games').innerHTML = allElements;
+        document.querySelector('#games').innerHTML = '';
+        writeAll();
+    }
+} 
