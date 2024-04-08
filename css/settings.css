@@ -67,3 +67,12 @@ button {
 button:hover {
     background-color: #3a5dc7;
 }
+
+/* Additional styles for settings page */
+#iconSelect {
+    margin-top: 5px;
+}
+
+.theme-options input[type="radio"] {
+    margin-right: 10px;
+}
