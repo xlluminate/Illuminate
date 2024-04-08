@@ -23,6 +23,7 @@ header {
 .top-nav {
     padding: 10px;
     background-color: #d8d8d8; /* Dark grey for top navigation */
+    transform: translateY(-5px);
 }
 
 nav.top-nav ul {
