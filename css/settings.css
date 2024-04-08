@@ -75,6 +75,15 @@ button:hover {
 
 .theme-options input[type="radio"] {
     margin-right: 10px;
+    display: none; /* Hide the radio buttons */
+}
+
+.theme-options label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Accent color: Light yellow */
