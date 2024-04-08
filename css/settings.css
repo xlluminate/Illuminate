@@ -79,11 +79,24 @@ button:hover {
 
 /* Accent color: Light yellow */
 .light-yellow {
-    color: #ffffcc; /* Pale yellow */
-    background-color: #ffff99; /* Lighter shade of yellow */
-    border-color: #cccc99; /* Lighter shade of grey */
+    color: #666600; /* Darker shade of yellow */
+    background-color: #ffffcc; /* Light yellow */
+    border: 1px solid #cccc99; /* Lighter shade of grey */
+    border-radius: 5px;
 }
 
 .light-yellow:hover {
     background-color: #ffffb3; /* Slightly darker shade of yellow on hover */
+}
+
+/* Styles for icon select */
+#iconSelect {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333333;
+    margin-top: 5px;
 }
