@@ -1,5 +1,6 @@
 var allElements = [];
-for (let i = 0; i < 624; i++) {
+var num = 623
+for (let i = 0; i < num; i++) {
     allElements.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
     document.querySelector('.card').remove();
 }
@@ -25,7 +26,7 @@ function search() {
     elementsNew = [];
     console.log(document.querySelector('.card').textContent);
     if (!(value == '')) {
-        for (let i = 0; i < 624; i++) {
+        for (let i = 0; i < num; i++) {
             console.log(document.querySelector('.card').textContent.includes(value));
             if (document.querySelector('.card').textContent.includes(value)) {
                 //document.querySelector('.card').style.display = 'block';
