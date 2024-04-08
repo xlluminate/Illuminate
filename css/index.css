@@ -142,7 +142,7 @@ footer {
     text-decoration: underline;
 }
 a {
-    color: #333333;
+    color: #666666;
     text-decoration: none;
 }
 a:hover {
@@ -168,3 +168,9 @@ button {
     transform: translateX(-20px);
     background-color: #ffffff; /* White for button */
     border: 0
+}
+.card {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
