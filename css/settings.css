@@ -69,7 +69,7 @@ button:hover {
 }
 
 /* Additional styles for settings page */
-#iconSelect {
+.icon-mask select, .title-mask input[type="text"] {
     margin-top: 5px;
 }
 
