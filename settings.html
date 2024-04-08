@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings | Illuminate</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="settings.css">
 </head>
 <body>
@@ -14,8 +14,21 @@
         <div class="section">
             <h2>Tab Mask</h2>
             <div class="tab-mask">
-                <input type="checkbox" id="tabMaskCheckbox">
-                <label for="tabMaskCheckbox">Enable Tab Mask</label>
+                <!-- Icon Mask Section -->
+                <div class="icon-mask">
+                    <h3>Icon Mask</h3>
+                    <select id="iconSelect">
+                        <option value="icon1">Icon 1</option>
+                        <option value="icon2">Icon 2</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                
+                <!-- Title Mask Section -->
+                <div class="title-mask">
+                    <h3>Title Mask</h3>
+                    <input type="text" id="titleInput" placeholder="Enter new title">
+                </div>
             </div>
         </div>
         
