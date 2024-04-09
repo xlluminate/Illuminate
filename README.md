@@ -11,8 +11,12 @@ An unblocked games website with multiple features, including proxies, apps, and 
 Most web hosts not listed here are still supported by Illuminate.
 ## Links
 Here are the current offical links for Illuminate:
-https://main.teacherease.net
+https://teacherease.net
+https://illuminating.pages.dev
+https://schoolfacts.xyz
 ## Support
-For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site . 
+For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site. 
 ## Assets
-add later
+Because of the large amount of games, they have been moved to https://github.com/MINECRAFTGOLDFISH3/assets 
+## Making your own site
+If you want to deploy your own verison of Illuminate, you should fork the both assets and this repsitory. 
