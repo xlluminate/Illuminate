@@ -178,3 +178,7 @@ button:hover {
     line-height: 30px;
     text-align: center;
 }
+p {
+    text-align:center;
+    color: #FFFFED;
+}
