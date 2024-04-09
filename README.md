@@ -10,6 +10,9 @@ An unblocked games website with multiple features, including proxies, apps, and 
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/mmtrucefacts/Illuminate)
 Most web hosts not listed here are still supported by Illuminate.
 ## Links
-Add later
+Here are the current offical links for Illuminate:
+https://main.teacherease.net
 ## Support
-Add later
+For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site . 
+## Assets
+add later
