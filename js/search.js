@@ -46,9 +46,9 @@ function search() {
         document.querySelector('#games').innerHTML = '';
         writeAll();
     }
-    function random() {
-        var game = Math.floor(Math.random() * allElements.length);
-        document.querySelector('#games').innerHTML = '';
-        document.querySelector('#games').innerHTML += allElements[game];
-    }
+}
+function random() {
+    var game = Math.floor(Math.random() * allElements.length);
+    document.querySelector('#games').innerHTML = '';
+    document.querySelector('#games').innerHTML += allElements[game];
 } 
