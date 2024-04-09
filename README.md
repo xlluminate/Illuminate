@@ -13,7 +13,7 @@ Most web hosts not listed here are still supported by Illuminate.
 Here are the current offical links for Illuminate:
 https://teacherease.net
 https://illuminating.pages.dev
-https://schoolfacts.xyz
+https://www.schoolfacts.xyz
 ## Support
 For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site. 
 ## Assets
