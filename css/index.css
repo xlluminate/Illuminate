@@ -176,6 +176,7 @@ button {
 button:hover {
     cursor: pointer;
     background-color: #e8e8e8; /* Medium grey when hovered */
+}
 .card {
     height: 30px;
     line-height: 30px;
