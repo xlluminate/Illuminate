@@ -195,6 +195,23 @@ button:hover {
     cursor: pointer;
     background-color: #e8e8e8; /* Medium grey when hovered */
 }
+/* CSS for random game button */
+button#random-btn {
+    height: 40px; /* Increased height */
+    border-radius: 6px;
+    background-color: #ffffcc; /* Pale yellow for button */
+    color: #333333;
+    padding: 0 20px; /* Add padding to adjust the size */
+    margin-bottom: 10px; /* Add margin for spacing */
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+button#random-btn:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
+}
 .card {
     height: 30px;
     line-height: 30px;
