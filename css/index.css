@@ -178,7 +178,22 @@ button:hover {
     line-height: 30px;
     text-align: center;
 }
-p {
-    text-align:center;
-    color: #FFFFED;
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%;
+    background-color: #000; /* Black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-link img {
+    width: 80%; /* Adjust the size of the logo */
+    height: auto;
+    filter: brightness(0) invert(1); /* Inverting colors to make the logo white */
 }
