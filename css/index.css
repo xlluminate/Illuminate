@@ -62,6 +62,7 @@ nav.top-nav ul li a:hover {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
+    position: relative; /* Ensure relative positioning for absolute positioning of the GitHub button */
 }
 
 .play-button {
@@ -217,13 +218,12 @@ button#random-btn:hover {
     line-height: 30px;
     text-align: center;
 }
-.github-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px; /* Adjust the size as needed */
-    height: 40px; /* Adjust the size as needed */
-    border-radius: 50%;
+github-link {
+    position: absolute;
+    bottom: calc(100% + 20px); /* Align the GitHub button under the Get Started button */
+    width: 180px; /* Adjust the width as needed */
+    height: 60px; /* Match the height of the Get Started button */
+    left: calc(50% - 90px); /* Center the GitHub button horizontally */
     background-color: #000; /* Black background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
     display: flex;
@@ -232,7 +232,6 @@ button#random-btn:hover {
 }
 
 .github-link img {
-    width: 60%; /* Adjust the size of the logo */
+    width: 50%; /* Adjust the size of the logo */
     height: auto;
-    filter: brightness(0) invert(1); /* Inverting colors to make the logo white */
-}
+    filter: brightness(0) invert(1);
