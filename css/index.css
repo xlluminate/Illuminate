@@ -158,15 +158,33 @@ a:hover {
 .small-spacer {
     height: 75px;
 }
+/* CSS for search bar */
 input#search {
-    height: 30px;
+    height: 40px; /* Increased height */
     border-radius: 6px;
     border: 1px solid #e0e0e0; /* Slightly darker grey for search bar */
     color: #333333;
-    transform: translateX(15px);
+    background-color: #ffffcc; /* Pale yellow for search bar */
+    padding: 0 15px; /* Add padding to adjust the size */
+    margin-bottom: 10px; /* Add margin for spacing */
 }
-input#search:focus {
-    outline: none;
+
+/* CSS for search button */
+button#search-btn {
+    height: 40px; /* Increased height */
+    border-radius: 6px;
+    background-color: #ffffcc; /* Pale yellow for button */
+    color: #333333;
+    padding: 0 20px; /* Add padding to adjust the size */
+    margin-bottom: 10px; /* Add margin for spacing */
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+button#search-btn:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
 }
 button {
     transform: translateX(-20px);
