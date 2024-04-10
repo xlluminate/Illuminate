@@ -193,7 +193,7 @@ button:hover {
 }
 
 .github-link img {
-    width: 80%; /* Adjust the size of the logo */
+    width: 60%; /* Adjust the size of the logo */
     height: auto;
     filter: brightness(0) invert(1); /* Inverting colors to make the logo white */
 }
