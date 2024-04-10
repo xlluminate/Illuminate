@@ -155,6 +155,9 @@ a:hover {
 .spacer {
     height: 500px;
 }
+.small-spacer {
+    height: 50px;
+}
 input#search {
     height: 30px;
     border-radius: 6px;
