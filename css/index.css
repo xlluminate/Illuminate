@@ -206,6 +206,7 @@ button#random-btn {
     margin-bottom: 10px; /* Add margin for spacing */
     cursor: pointer;
     border: none; /* Remove default button border */
+    transform: translateX(0); /* Fix position */
     transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
 }
 
