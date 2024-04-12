@@ -17,4 +17,4 @@ https://www.schoolfacts.xyz
 ## Support
 For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site. 
 ## Assets
-Because of the large amount of games, they have been moved to https://github.com/xlluminate/
+Because of the large amount of games, they have been moved to https://github.com/xlluminate/assets
