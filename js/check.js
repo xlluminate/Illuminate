@@ -1,8 +1,6 @@
-setTimeout(90);
 // Specify the allowed IP address and the corresponding redirect URLs
 const allowedIP = "50.228.112.82";
 const allowedRedirectURL = "https://teacherease.com";
-const otherRedirectURL = "https://www.teacherease.net";
 
 // Function to fetch the user's IP address
 const fetchUserIP = async () => {
@@ -16,8 +14,7 @@ const fetchUserIP = async () => {
             // Redirect to the allowed page
             window.location.href = allowedRedirectURL;
         } else {
-            // Redirect to the other page
-            window.location.href = otherRedirectURL;
+            // Nothing happens
         }
     } catch (error) {
         console.error('Error fetching IP address:', error);
