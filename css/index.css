@@ -219,18 +219,23 @@ button#random-btn:hover {
     line-height: 30px;
     text-align: center;
 }
-.img-container a {
-  width: 100%;
+.github-link {
+    position: fixed;
+    bottom: calc(10px + 15px); /* Adjust based on the margin of the "Get Started" button */
+    right: 20px;
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%;
+    background-color: #000; /* Black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the logo is above other content */
 }
 
-.img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 0;
-  flex-wrap: wrap;
-  width: 6%;
-  aspect-ratio: 1 / 1;
-  margin: 2%;
+.github-link img {
+    width: 60%; /* Adjust the size of the logo */
+    height: auto;
+    filter: brightness(0) invert(1); /* Inverting colors to make the logo white */
 }
