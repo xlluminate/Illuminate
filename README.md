@@ -8,7 +8,7 @@ An weekly updated unblocked games website with multiple features, including prox
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/mmtrucefacts/Illuminate)
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/mmtrucefacts/Illuminate)
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/mmtrucefacts/Illuminate)
-Most web hosts not listed here are still supported by Illuminate.
+Most web hosts not listed here are still supported by Illuminate. If you're forking this repo, please give it a star!
 ## Links
 Here are the current offical links for Illuminate:
 https://teacherease.net
