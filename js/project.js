@@ -3,49 +3,43 @@ function extractGameURL() {
     // Get the full URL of the page
     var url = window.location.href;
     
-    // Check if the URL contains a query string
-    if (url.indexOf('?') !== -1) {
-        // Split the URL at the '?' character to get the query string
-        var queryString = url.split('?')[1];
+    // Check if the URL contains 'game.html?url='
+    if (url.includes('game.html?url=')) {
+        // Extract the game URL after 'game.html?url='
+        var gameURL = url.split('game.html?url=')[1];
         
-        // Split the query string at the '&' character to get individual parameters
-        var parameters = queryString.split('&');
+        // Decode URI component to handle special characters
+        gameURL = decodeURIComponent(gameURL);
         
-        // Loop through each parameter to find the one with the game URL
-        for (var i = 0; i < parameters.length; i++) {
-            var parameter = parameters[i];
-            
-            // Check if the parameter starts with 'https://'
-            if (parameter.startsWith('https://')) {
-                // Return the game URL
-                return parameter;
-            }
-        }
+        return gameURL;
     }
     
-    // If no game URL is found, return null
+    // If the URL format is incorrect, return null
     return null;
 }
 
 // iframe function
 function createIframe(gameURL) {
-    // create iframe
+    // Create iframe element
     var iframe = document.createElement('iframe');
     
-    // set iframe
+    // Set iframe attributes
     iframe.src = gameURL;
+    iframe.style.width = "100%"; // Set width to 100%
+    iframe.style.height = "100%"; // Set height to 100%
+    iframe.style.border = "none"; // Remove border
     
-    // put the iframe
+    // Append iframe to container
     document.getElementById('game-container').appendChild(iframe);
 }
 
-// get url
+// Get game URL from URL parameters
 var gameURL = extractGameURL();
 
-// checks url
+// Check if game URL exists
 if (gameURL) {
     createIframe(gameURL);
 } else {
+    // Redirect to 404 page if no game URL is found
     window.location.href = "404.html";
 }
-// thank you chatgpt for half of this
