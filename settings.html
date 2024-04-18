@@ -1,56 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-</head>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Settings | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/index.css" />
+    </head>
     <body>
-    <nav class="top-nav">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="projects.html">Games</a></li>
-                <li><a href="proxies.html">Proxies</a></li>
-                <li><a href="apps.html">Apps</a></li>
-                <li><a href="cheats/index.html">Cheats</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="other/index.html">Other</a></li>
-            </ul>
-        </nav>
-        <div class="container">
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="projects.html">Games</a></li>
+                        <li><a href="proxies.html">Proxies</a></li>
+                        <li><a href="apps.html">Apps</a></li>
+                        <li><a href="cheats/index.html">Cheats</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="other/index.html">Other</a></li>
+                    </ul>
+                </nav>
+                <div class="container">
         <h1>Settings</h1>
         <!-- Tab Mask Section -->
         <div class="section"> 
             <div class="tab-mask">
-                <!-- Icon Mask Section -->
-                <div class="icon-mask">
-                    <h3>Icon Mask</h3>
-                    <select id="iconSelect">
-                        <option value="icon1">Icon 1</option>
-                        <option value="icon2">Icon 2</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
-                
                 <!-- Title Mask Section -->
                 <div class="title-mask">
-                    <h3>Title Mask</h3>
-                    <input type="text" id="titleInput" placeholder="Enter new title">
+                    <h3>Change Name</h3>
+                    <input type="text" id="titleInput" placeholder="Enter new name">
                 </div>
             </div>
         </div>
-        
-        <!-- Theme Section -->
         <div class="section">
-            <h2>Theme</h2>
+            <h2>Gameservers</h2>
             <div class="theme-options">
-                <input type="radio" id="lightTheme" name="theme" value="light" checked>
+                <input type="radio" id="lightTheme" name="theme" value="teacherease">
+                <label for="lightTheme">teacherease.net</label>
+                
+                <input type="radio" id="darkTheme" name="theme" value="schoolfacts1">
+                <label for="darkTheme">schoolfacts.xyz</label>
+            </div>
+            <h2>Themes</h2>
+            <div class="theme-options">
+                <input type="radio" id="lightTheme" name="theme" value="light">
                 <label for="lightTheme">Light Theme</label>
                 
                 <input type="radio" id="darkTheme" name="theme" value="dark">
@@ -58,5 +55,8 @@
             </div>
         </div>
     </div>
-</body>
+        </div>
+        <div class="spacer"></div>
+        <div class="footer"><a href="index.html">Back to Homepage</a></div>
+    </body>
 </html>
