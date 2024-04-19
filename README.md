@@ -1,5 +1,5 @@
 ## Illuminate
-An weekly updated unblocked games website with multiple features, including proxies, apps, and more!
+A weekly updated unblocked games website with multiple features, including proxies, apps, and more!
 ## Deploy to a web service
 [![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template?template=https://github.com/mmtrucefacts/Illuminate)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/mmtrucefacts/Illuminate)
