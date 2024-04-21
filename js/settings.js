@@ -6,21 +6,17 @@ function handleThemeSelection() {
     // Set cookie based on the selected theme
     switch(selectedTheme) {
         case 'teacherease':
-            // Set cookie value for teacherease.net
-            document.cookie = "theme=teacherease; path=/";
+            document.cookie = "server=teacherease; path=/";
             break;
         case 'schoolfacts':
-            // Set cookie value for schoolfacts.xyz
-            document.cookie = "theme=schoolfacts; path=/";
+            document.cookie = "server=schoolfacts; path=/";
             break;
         case 'light':
- 
+            document.cookie = "theme=light; path=/";
+            break;
             break;
         case 'dark':
-
-            break;
-        default:
-
+            document.cookie = "theme=dark; path=/";
             break;
     }
 }
