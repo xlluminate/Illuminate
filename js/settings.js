@@ -1,30 +1,58 @@
-// Function to handle theme selection and set cookie
-function handleThemeSelection() {
-    // Get the selected theme value
-    var selectedTheme = document.querySelector('input[name="theme"]:checked').value;
+// Settings JavaScript
 
-    // Set cookie based on the selected theme
-    switch(selectedTheme) {
-        case 'teacherease':
-            document.cookie = "server=teacherease; path=/";
-            break;
-        case 'schoolfacts':
-            document.cookie = "server=schoolfacts; path=/";
-            break;
+// Function to set the theme
+function setTheme(theme) {
+    document.body.className = theme; // Set the body class to the selected theme
+}
+
+// Function to set the game server
+function setGameServer(server) {
+    // Get all game links
+    var gameLinks = document.querySelectorAll('.game-link');
+
+    // Iterate over each game link and update the href attribute
+    gameLinks.forEach(function(link) {
+        var href = link.getAttribute('data-original-href');
+        link.href = href.replace('projectassets.teacherease.net', server);
+    });
+}
+
+// Function to handle theme selection
+function handleThemeSelection(theme) {
+    switch (theme) {
         case 'light':
-            document.cookie = "theme=light; path=/";
-            break;
+            setTheme('light');
             break;
         case 'dark':
-            document.cookie = "theme=dark; path=/";
+            setTheme('dark');
             break;
     }
 }
 
-// Add event listener to handle theme selection
-document.addEventListener('DOMContentLoaded', function() {
-    var themeOptions = document.querySelectorAll('input[name="theme"]');
-    themeOptions.forEach(function(option) {
-        option.addEventListener('change', handleThemeSelection);
+// Function to handle game server selection
+function handleServerSelection(server) {
+    switch (server) {
+        case 'teacherease':
+            setGameServer('projectassets.teacherease.net');
+            break;
+        case 'schoolfacts':
+            setGameServer('projectassets.schoolfacts.xyz');
+            break;
+    }
+}
+
+// Event listener for theme selection
+document.querySelectorAll('input[name="theme"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+        var theme = this.value; // Get the selected theme
+        handleThemeSelection(theme); // Handle theme selection
+    });
+});
+
+// Event listener for game server selection
+document.querySelectorAll('input[name="server"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+        var server = this.value; // Get the selected game server
+        handleServerSelection(server); // Handle game server selection
     });
 });
