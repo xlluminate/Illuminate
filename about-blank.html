@@ -19,7 +19,11 @@
         iframe.allow = "fullscreen";
         var windows = window.location.href;
         var i = 0;
-          for (i = 0; i < 16; i++) {
+        var amount = 16;
+        if (window.location.href.includes("teacherease") || window.location.href.includes("schoolfacts")) {
+            amount = 11;
+        }
+          for (i = 0; i < amount; i++) {
               windows = windows.replace(/.$/, "");
           }
         iframe.src = windows;
