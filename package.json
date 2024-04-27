@@ -1,0 +1,20 @@
+{
+  "name": "illuminate",
+  "description": "Illuminate",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn",
+    "start": "yarn run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xlluminate/Illuminate.git"
+  },
+  "keywords": [],
+  "author": "xlluminate",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/xlluminate/Illuminate/issues"
+  },
+  "homepage": "https://github.com/xlluminate/Illuminate"
+}
