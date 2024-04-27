@@ -28,7 +28,7 @@ function search() {
     if (!(value == '')) {
         for (let i = 0; i < num; i++) {
             console.log(document.querySelector('.card').textContent.toLowerCase().includes(value.toLowerCase()));
-            if (document.querySelector('.card').textContent.includes(value)) {
+            if (document.querySelector('.card').textContent.toLowerCase().includes(value.toLowerCase())) {
                 //document.querySelector('.card').style.display = 'block';
                 elementsNew.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
                 document.querySelector('.card').remove();
