@@ -17,8 +17,10 @@
         iframe.style.margin = "0";
         iframe.referrerpolicy = "no-referrer";
         iframe.allow = "fullscreen";
-          for (let i=0, i<16, i++) {
-              let window = window.location.href.replace(/.$/, "");
+        var window = "";
+        var i = 0;
+          for (i=0, i<16, i++) {
+              window = window.location.href.replace(/.$/, "");
           }
         iframe.src = window;
         win.document.body.appendChild(iframe);
