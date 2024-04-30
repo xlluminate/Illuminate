@@ -6,8 +6,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css" />
-    <script src="../js/settings.js" defer></script>
+    <style>
+        /* CSS for Settings Page */
+        body {
+            font-family: "Noto Serif", serif;
+            font-optical-sizing: auto;
+            font-weight: 300%;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffcc; /* Yellow background */
+            color: #333333;
+        }
+        
+        header {
+            background-color: #ffff99; /* Light yellow for header */
+            color: #333333;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+        }
+        
+        .top-nav {
+            padding: 10px;
+            background-color: #d8d8d8; /* Dark grey for top navigation */
+            transform: translateY(-5px);
+        }
+        
+        nav.top-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        nav.top-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        nav.top-nav ul li a {
+            color: #333333;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav.top-nav ul li a:hover {
+            background-color: #c1c1c1; /* Slightly darker grey on hover */
+        }
+        
+        h1 {
+            margin-top: 30px;
+            color: #333333;
+        }
+        
+        p {
+            color: #333333;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="center">
@@ -15,7 +76,7 @@
             <nav class="top-nav">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="projects.html">Games</a></li>
+                    <li><a href="">Games</a></li>
                     <li><a href="proxies.html">Proxies</a></li>
                     <li><a href="apps.html">Apps</a></li>
                     <li><a href="cheats/index.html">Cheats</a></li>
@@ -26,35 +87,8 @@
                 </ul>
             </nav>
             <h1>Settings</h1>
+            <p>Coming Soon...</p>
         </header>
-        <div class="container">
-            <div class="section">
-                <h3>Change Name</h3>
-                <input type="text" id="titleInput" placeholder="Enter new name">
-            </div>
-            <div class="section">
-                <h2>Gameservers</h2>
-                <div class="theme-options">
-                    <input type="radio" id="teachereaseTheme" name="theme" value="teacherease">
-                    <label for="teachereaseTheme">teacherease.net</label>
-
-                    <input type="radio" id="schoolfactsTheme" name="theme" value="schoolfacts1">
-                    <label for="schoolfactsTheme">schoolfacts.xyz</label>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Themes</h2>
-                <div class="theme-options">
-                    <input type="radio" id="lightTheme" name="theme" value="light">
-                    <label for="lightTheme">Light Theme</label>
-
-                    <input type="radio" id="darkTheme" name="theme" value="dark">
-                    <label for="darkTheme">Dark Theme</label>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="spacer"></div>
-    <div class="footer"><a href="index.html">Back to Homepage</a></div>
 </body>
 </html>
