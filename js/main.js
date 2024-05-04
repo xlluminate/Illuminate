@@ -13,3 +13,7 @@ var pageTitle = getCookie('title');
 if (!(pageTitle == null)) {
     document.title = pageTitle
 }
+var faviconLink = getCookie('favicon');
+if (!(faviconLink == null)) {
+    $('head').append('<link id="dynamic-favicon" rel="shortcut icon" href="' + faviconLink + '" />');
+}

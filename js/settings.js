@@ -67,6 +67,7 @@ function setCookie(name, value, days) {
 }
 function apply() {
     setCookie('title', document.getElementById('title').value, '10');
+    setCookie('favicon', document.getElementById('favicon').value, '10');
 }
 function getCookie(name) {
     var nameEQ = name + "=";
@@ -77,4 +78,11 @@ function getCookie(name) {
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
+}
+function reset() {
+    eraseCookie('title');
+    eraseCookie('favicon');
+}
+function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999;";
 }
