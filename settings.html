@@ -23,14 +23,14 @@
         header {
             background-color: #ffff99; /* Light yellow for header */
             color: #333333;
-            padding: 20px 0;
+            padding: 1px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
         }
         
         .top-nav {
             padding: 10px;
-            background-color: #d8d8d8; /* Dark grey for top navigation */
+            background-color: #d5d500; /* Dark yellow for top navigation */
             transform: translateY(-5px);
         }
         
@@ -55,7 +55,7 @@
         }
         
         nav.top-nav ul li a:hover {
-            background-color: #c1c1c1; /* Slightly darker grey on hover */
+            background-color: #bdbd00; /* Slightly darker yellow on hover */
         }
         
         h1 {
@@ -66,6 +66,9 @@
         p {
             color: #333333;
             font-size: 18px;
+            text-align: center;
+        }
+        .center {
             text-align: center;
         }
     </style>
@@ -87,8 +90,16 @@
                 </ul>
             </nav>
             <h1>Settings</h1>
-            <p>Coming Soon...</p>
         </header>
+        <div class="center">
+            <h2>Tab Cloaker:</h2>
+            <h3>Title Changer</h3>
+            <p>Enter the title of the site you want to appear.</p>
+            <input id="title" />
+            <button onclick="apply()">Apply</button>
+            <p id="expiration-date"><i></i></p>
+        </div>
     </div>
+    <script src="js/settings.js"></script>
 </body>
 </html>
