@@ -56,3 +56,33 @@ document.querySelectorAll('input[name="server"]').forEach(function(input) {
         handleServerSelection(server); // Handle game server selection
     });
 });
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+function apply() {
+    setCookie('title', document.getElementById('title').value, '10');
+    setCookie('favicon', document.getElementById('favicon').value, '10');
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+function reset() {
+    eraseCookie('title');
+    eraseCookie('favicon');
+}
+function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999;";
+}
