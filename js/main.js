@@ -15,5 +15,12 @@ if (!(pageTitle == null)) {
 }
 var faviconLink = getCookie('favicon');
 if (!(faviconLink == null)) {
-    $('head').append('<link id="dynamic-favicon" rel="shortcut icon" href="' + faviconLink + '" />');
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+    }
+    link.href = faviconLink;
 }
+
