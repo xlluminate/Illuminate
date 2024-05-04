@@ -30,7 +30,7 @@
         
         .top-nav {
             padding: 10px;
-            background-color: #d5d500; /* Dark yellow for top navigation */
+            background-color: #e1e136; /* Dark yellow for top navigation */
             transform: translateY(-5px);
         }
         
@@ -55,7 +55,7 @@
         }
         
         nav.top-nav ul li a:hover {
-            background-color: #bdbd00; /* Slightly darker yellow on hover */
+            background-color: #d4d435; /* Slightly darker yellow on hover */
         }
         
         h1 {
@@ -71,6 +71,49 @@
         .center {
             text-align: center;
         }
+        input {
+            height: 40px;
+            border-radius: 0px;
+            border: none;
+            color: #333333;
+            background-color: #ffff3b; /* Yellow for title and favicon inputs */
+            padding: 0 15px;
+            margin-bottom: 10px;
+            transform: translateX(20px);
+            transition: background-color 0.3s ease;
+        }
+
+            input:focus {
+                outline: none;
+                background-color: #e1e136; /* Slightly darker yellow when clicked on */
+            }
+
+            input:hover {
+                background-color: #e1e136; /* Slightly darker yellow when hovered on */
+                transition: background-color 0.3s ease;
+            }
+
+        button {
+            height: 40px;
+            border-radius: 6px;
+            background-color: #ffff3b; /* Yellow for buttons */
+            color: #333333;
+            padding: 0 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: none;
+            transform: translateX(0px);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #e1e136; /* Slightly darker yellow when hovered on */
+                color: #666666;
+            }
+        .spacer {
+            height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -78,8 +121,8 @@
         <header>
             <nav class="top-nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="">Games</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Games</a></li>
                     <li><a href="proxies.html">Proxies</a></li>
                     <li><a href="apps.html">Apps</a></li>
                     <li><a href="cheats/index.html">Cheats</a></li>
@@ -95,13 +138,15 @@
             <h2>Tab Cloaker:</h2>
             <h3>Title Changer</h3>
             <p>Enter the title of the site you want to appear.</p>
-            <input id="title" />
+            <input id="title" /><button onclick="apply()">Apply</button>
+            <h2>Favicon Changer</h2>
             <p>Enter a web url of a .png or .ico file you want to appear as the favicon of the site. (Example: https://www.google.com/favicon.ico)</p>
-            <input id="favicon" /> <br />
-            <button onclick="apply()">Apply</button> <br />
-            <button onclick="reset()">Reset</button>
+            <input id="favicon" /><button onclick="apply()">Apply</button> <br />
+            <button onclick="reset()">Reset All</button>
+            <div class="spacer"></div>
         </div>
     </div>
     <script src="js/settings.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
