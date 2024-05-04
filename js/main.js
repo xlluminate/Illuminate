@@ -9,7 +9,7 @@ function getCookie(name) {
     return null;
 }
 
-getCookie('title');
-if (!(title == "")) {
-    document.title = ca;
+var pageTitle = getCookie('title');
+if (!(pageTitle == null)) {
+    document.title = pageTitle
 }
