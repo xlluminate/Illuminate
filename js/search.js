@@ -1,5 +1,5 @@
 var allElements = [];
-var num = 647;
+var num = 648;
 for (let i = 0; i < num; i++) {
     allElements.push('<div class="card">' + document.querySelector('.card').innerHTML + '</div>');
     document.querySelector('.card').remove();

@@ -169,6 +169,9 @@ input#search {
     padding: 0 15px; /* Add padding to adjust the size */
     margin-bottom: 10px; /* Add margin for spacing */
 }
+input#search:focus {
+    outline: none;
+}
 
 /* CSS for search button */
 button#search-btn {
