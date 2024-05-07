@@ -13,8 +13,8 @@
             overflow: hidden;
         }
         #game-container {
-            width: 100%;
-            height: 94%;
+            width: 100%; /* Initially set to full width */
+            height: 80%; /* Initially set to 80% of the viewport height */
         }
         .backbutton {
             position: fixed;
@@ -27,10 +27,8 @@
             color: #000000;
             padding: 10px;
             font-size: 16px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            position: relative; /* Change to relative positioning */
+            /* Remove left, right, and bottom properties */
             box-shadow: 0 0 12px #cccccc;
         }
         a {
@@ -43,14 +41,47 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        #fullscreen-btn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 9999; /* Ensure button is above everything */
+            background-color: #007dcc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #ad-container {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9998; /* Ensure ad is below fullscreen button */
+        }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--<div class="backbutton"><a href="projects.html"><img src="img/back.svg" /></a></div>-->
-    <!-- iframe -->   
-<div id="game-container"></div>
+    <!-- Ad code container -->
+    <div id="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
+         crossorigin="anonymous"></script>
+        <!-- Projects Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3317735030374126"
+             data-ad-slot="4276812776"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!-- iframe -->
+    <div id="game-container"></div>
+    <!-- Fullscreen button -->
+    <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
     <footer><a href="projects.html">Back to Homepage</a></footer>
     <script src="js/project.js"></script>
     <script src="js/main.js"></script>
