@@ -15,6 +15,18 @@
         #game-container {
             width: 100%; /* Initially set to full width */
             height: 94%; /* Initially set to 80% of the viewport height */
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            z-index: 9999;
+        }
+        #fullscreen-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        #fullscreen-btn:hover {
+            cursor: pointer;
         }
         .backbutton {
             position: fixed;
@@ -48,7 +60,45 @@
     <!-- Ad code container -->
     <!-- iframe -->
     <div id="game-container"></div>
+    <div id="fullscreen-btn"><img src="img/fullscreen.svg" width="50" height="50" onclick="fullscreen()" /></div>
     <footer><a href="projects.html">Back to Homepage</a></footer>
+    <script>
+        var fullScreen = 0;
+        var mouseDown = 0;
+        document.body.onmousedown = function() {
+            ++mouseDown;
+        }
+        document.body.onmouseup = function() {
+            --mouseDown;
+        }
+        function fullscreen() {
+            if (fullScreen == 0) {
+                document.getElementById('fullscreen-btn').style.zIndex = '1000';
+                document.getElementById('game-container').style.width = '100%';
+                document.getElementById('game-container').style.height = '100%';
+                document.getElementById('game-container').style.zIndex = '999';
+                document.getElementById('game-container').style.position = 'fixed';
+                document.getElementById('game-container').style.top = '0';
+                document.getElementById('game-container').style.left = '0';
+                fullScreen = 1;
+                while (mouseDown) {
+                    yield;
+                }
+            } else {
+                document.getElementById('fullscreen-btn').style.zIndex = '1000';
+                document.getElementById('game-container').style.width = '80%';
+                document.getElementById('game-container').style.height = '74%';
+                document.getElementById('game-container').style.zIndex = '999';
+                document.getElementById('game-container').style.position = 'fixed';
+                document.getElementById('game-container').style.top = '10%';
+                document.getElementById('game-container').style.left = '10%';
+                fullScreen = 0;
+                while (mouseDown) {
+                    yield;
+                }
+            }
+        }
+    </script>
     <script src="js/project.js"></script>
     <script src="js/main.js"></script>
 </body>
