@@ -56,80 +56,51 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        #ad-container {
-            width: 728px;
-            height: 90px;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999; /* Ensure it's above other content */
-            visibility: visible; /* Initially visible */
-        }
     </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Ad code container -->
-    <div id="ad-container">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
-     crossorigin="anonymous"></script>
-<!-- Fixed 728-90 Ad -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-3317735030374126"
-     data-ad-slot="5787498701"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
     <!-- iframe -->
     <div id="game-container"></div>
     <div id="fullscreen-btn"><img src="img/fullscreen.svg" width="50" height="50" onclick="fullscreen()" /></div>
     <footer><a href="projects.html">Back to Homepage</a></footer>
     <script>
         var fullScreen = 0;
-var mouseDown = 0;
-
-document.body.onmousedown = function() {
-    ++mouseDown;
-}
-
-document.body.onmouseup = function() {
-    --mouseDown;
-}
-
-function fullscreen() {
-    var gameContainer = document.getElementById('game-container');
-    var adContainer = document.getElementById('ad-container');
-
-    if (fullScreen == 0) {
-        // Fullscreen mode
-        gameContainer.style.width = '100%';
-        gameContainer.style.height = '100%';
-        gameContainer.style.position = 'fixed';
-        gameContainer.style.top = '0';
-        gameContainer.style.left = '0';
-
-        adContainer.style.visibility = 'hidden'; // Hide the ad container
-        fullScreen = 1;
-        while (mouseDown) {
-            yield;
+        var mouseDown = 0;
+        document.body.onmousedown = function() {
+            ++mouseDown;
         }
-    } else {
-        // Exit fullscreen mode
-        gameContainer.style.width = '80%';
-        gameContainer.style.height = '74%';
-        gameContainer.style.position = 'fixed';
-        gameContainer.style.top = '10%';
-        gameContainer.style.left = '10%';
-
-        adContainer.style.visibility = 'visible'; // Show the ad container
-        fullScreen = 0;
-        while (mouseDown) {
-            yield;
+        document.body.onmouseup = function() {
+            --mouseDown;
         }
-    }
-}
+        function fullscreen() {
+            if (fullScreen == 0) {
+                document.getElementById('fullscreen-btn').style.zIndex = '1000';
+                document.getElementById('game-container').style.width = '100%';
+                document.getElementById('game-container').style.height = '100%';
+                document.getElementById('game-container').style.zIndex = '999';
+                document.getElementById('game-container').style.position = 'fixed';
+                document.getElementById('game-container').style.top = '0';
+                document.getElementById('game-container').style.left = '0';
+                fullScreen = 1;
+                while (mouseDown) {
+                    yield;
+                }
+            } else {
+                document.getElementById('fullscreen-btn').style.zIndex = '1000';
+                document.getElementById('game-container').style.width = '80%';
+                document.getElementById('game-container').style.height = '74%';
+                document.getElementById('game-container').style.zIndex = '999';
+                document.getElementById('game-container').style.position = 'fixed';
+                document.getElementById('game-container').style.top = '10%';
+                document.getElementById('game-container').style.left = '10%';
+                fullScreen = 0;
+                while (mouseDown) {
+                    yield;
+                }
+            }
+        }
     </script>
     <script src="js/project.js"></script>
     <script src="js/main.js"></script>
