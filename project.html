@@ -89,7 +89,6 @@
     <script>
         var fullScreen = 0;
 var mouseDown = 0;
-var adContainer = document.getElementById('ad-container'); // Get the ad container element
 
 document.body.onmousedown = function() {
     ++mouseDown;
@@ -100,28 +99,31 @@ document.body.onmouseup = function() {
 }
 
 function fullscreen() {
+    var gameContainer = document.getElementById('game-container');
+    var adContainer = document.getElementById('ad-container');
+
     if (fullScreen == 0) {
-        document.getElementById('fullscreen-btn').style.zIndex = '1000';
-        document.getElementById('game-container').style.width = '100%';
-        document.getElementById('game-container').style.height = '100%';
-        document.getElementById('game-container').style.zIndex = '999';
-        document.getElementById('game-container').style.position = 'fixed';
-        document.getElementById('game-container').style.top = '0';
-        document.getElementById('game-container').style.left = '0';
-        adContainer.style.display = 'none'; // Hide the ad container
+        // Fullscreen mode
+        gameContainer.style.width = '100%';
+        gameContainer.style.height = '100%';
+        gameContainer.style.position = 'fixed';
+        gameContainer.style.top = '0';
+        gameContainer.style.left = '0';
+
+        adContainer.style.visibility = 'hidden'; // Hide the ad container
         fullScreen = 1;
         while (mouseDown) {
             yield;
         }
     } else {
-        document.getElementById('fullscreen-btn').style.zIndex = '1000';
-        document.getElementById('game-container').style.width = '80%';
-        document.getElementById('game-container').style.height = '74%';
-        document.getElementById('game-container').style.zIndex = '999';
-        document.getElementById('game-container').style.position = 'fixed';
-        document.getElementById('game-container').style.top = '10%';
-        document.getElementById('game-container').style.left = '10%';
-        adContainer.style.display = 'block'; // Show the ad container
+        // Exit fullscreen mode
+        gameContainer.style.width = '80%';
+        gameContainer.style.height = '74%';
+        gameContainer.style.position = 'fixed';
+        gameContainer.style.top = '10%';
+        gameContainer.style.left = '10%';
+
+        adContainer.style.visibility = 'visible'; // Show the ad container
         fullScreen = 0;
         while (mouseDown) {
             yield;
