@@ -62,18 +62,11 @@
 <body>
     <!-- Ad code container -->
     <!-- iframe -->
-    <div id="game-container"></div>
-    <div id="fullscreen-btn"><img src="img/fullscreen.svg" width="50" height="50" onclick="fullscreen()" /></div>
-    <footer><a href="projects.html">Back to Homepage</a></footer>
+    <div id="game-container" draggable="false"></div>
+    <div id="fullscreen-btn"><img src="img/fullscreen.svg" width="50" height="50" draggable="false" onclick="fullscreen()" /></div>
+    <footer><a href="projects.html" draggable="false">Back to Homepage</a></footer>
     <script>
         var fullScreen = 0;
-        var mouseDown = 0;
-        document.body.onmousedown = function() {
-            ++mouseDown;
-        }
-        document.body.onmouseup = function() {
-            --mouseDown;
-        }
         function fullscreen() {
             if (fullScreen == 0) {
                 document.getElementById('fullscreen-btn').style.zIndex = '1000';
@@ -84,9 +77,6 @@
                 document.getElementById('game-container').style.top = '0';
                 document.getElementById('game-container').style.left = '0';
                 fullScreen = 1;
-                while (mouseDown) {
-                    yield;
-                }
             } else {
                 document.getElementById('fullscreen-btn').style.zIndex = '1000';
                 document.getElementById('game-container').style.width = '80%';
@@ -96,9 +86,6 @@
                 document.getElementById('game-container').style.top = '10%';
                 document.getElementById('game-container').style.left = '10%';
                 fullScreen = 0;
-                while (mouseDown) {
-                    yield;
-                }
             }
         }
     </script>
