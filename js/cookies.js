@@ -70,7 +70,7 @@ function cookiePopupBox() {
 }
 
 function cookiePopupDismiss() {
-  setCookie("cookiePopupDismiss", "1", 7);
+  setCookie("cookiePopupDismiss", "1", 30);
   pureFadeOut("cookiePopupBoxContainer");
 }
 
