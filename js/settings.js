@@ -66,8 +66,8 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 function apply() {
-    setCookie('title', document.getElementById('title').value, '10');
-    setCookie('favicon', document.getElementById('favicon').value, '10');
+    setCookie('title', document.getElementById('title').value, '30');
+    setCookie('favicon', document.getElementById('favicon').value, '30');
 }
 function getCookie(name) {
     var nameEQ = name + "=";
