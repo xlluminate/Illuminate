@@ -13,8 +13,8 @@
             overflow: hidden;
         }
         #game-container {
-            width: 80%; /* Initially set to 80% width */
-            height: 74%; /* Initially set to 74% of the viewport height */
+            width: 56%; 
+            height: 49%; 
             position: fixed;
             top: 10%;
             left: 10%;
@@ -60,7 +60,16 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Ad code container -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
+     crossorigin="anonymous"></script>
+<!-- Fixed 728-90 Ad -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3317735030374126"
+     data-ad-slot="5787498701"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!-- iframe -->
     <div id="game-container" draggable="false"></div>
     <div id="fullscreen-btn"><img src="img/fullscreen.svg" width="50" height="50" draggable="false" onclick="fullscreen()" /></div>
@@ -79,8 +88,8 @@
                 fullScreen = 1;
             } else {
                 document.getElementById('fullscreen-btn').style.zIndex = '1000';
-                document.getElementById('game-container').style.width = '80%';
-                document.getElementById('game-container').style.height = '74%';
+                document.getElementById('game-container').style.width = '56%';
+                document.getElementById('game-container').style.height = '49%';
                 document.getElementById('game-container').style.zIndex = '999';
                 document.getElementById('game-container').style.position = 'fixed';
                 document.getElementById('game-container').style.top = '10%';
