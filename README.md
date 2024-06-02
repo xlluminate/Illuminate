@@ -19,6 +19,10 @@ Here are the current offical links for Illuminate:
 
 * https://www.schoolfacts.xyz
 
+* https://illuminating.us
+
+* https://illuminating.netlify.app
+
 ## Support
 For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site. 
 ## Assets
