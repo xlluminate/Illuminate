@@ -1,0 +1,208 @@
+/* Existing styles */
+body {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300%;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333333;
+}
+
+header {
+    background-color: #e8e8e8; /* Medium grey for header */
+    color: #333333;
+    padding: 1px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.top-nav {
+    padding: 10px;
+    background-color: #d8d8d8; /* Dark grey for top navigation */
+    transform: translateY(-5px);
+}
+
+nav.top-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.top-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav.top-nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav.top-nav ul li a:hover {
+    background-color: #c1c1c1; /* Slightly darker grey on hover */
+}
+
+#subtitle {
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute positioning of the GitHub button */
+}
+
+.play-button {
+    background-color: #ffffcc; /* Pale yellow for play button */
+    color: #333333;
+    padding: 15px 40px;
+    font-size: 20px;
+    border: 2px solid #e0e0e0; /* Slightly darker grey border */
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    transform: translateX(0px);
+}
+
+.play-button:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
+    border-color: #cccccc; /* Darker grey border color on hover */
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for 5 per row */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.game-item {
+    background-color: #ffffcc; /* Light yellow background for game items */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.game-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Scaling up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover */
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.game-item h3 {
+    margin: 10px 0;
+    color: #6495ED; /* Cornflower blue for game titles */
+}
+
+footer {
+    background-color: #e8e8e8; /* Light grey for footer */
+    color: #333333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.footer {
+    background-color: #e8e8e8; /* Light grey for footer */
+    color: #333333;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.footer a {
+    color: #0196ff; /* Blue for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #0196ff; /*Blue for links*/
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+.spacer {
+    height: 180px;
+}
+
+.small-spacer {
+    height: 75px;
+}
+
+/* CSS for search bar */
+input#search {
+    height: 40px; /* Increased height */
+    border-radius: 6px;
+    border: 1px solid #e0e0e0; /* Slightly darker grey for search bar */
+    color: #333333;
+    background-color: #ffffcc; /* Pale yellow for search bar */
+    padding: 0 15px; /* Add padding to adjust the size */
+    margin-bottom: 10px; /* Add margin for spacing */
+}
+
+input#search:focus {
+    outline: none;
+}
+
+/* CSS for search button */
+button#search-btn {
+    height: 40px; /* Increased height */
+    border-radius: 6px;
+    background-color: #ffffcc; /* Pale yellow for button */
+    color: #333333;
+    padding: 0 20px; /* Add padding to adjust the size */
+    margin-bottom: 10px; /* Add margin for spacing */
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+button#search-btn:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
+}
+
+button {
+    transform: translateX(-20px);
+    background-color: #ffffff; /* White for button */
+    border: 
