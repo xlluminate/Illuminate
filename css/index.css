@@ -242,3 +242,41 @@ button#random-btn:hover {
     height: auto;
     filter: brightness(0) invert(1); /* Inverting colors to make the logo white */
 }
+/* CSS for the game list container */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* CSS for each game item/card */
+.game-item {
+    background-color: #ffffcc; /* Light yellow background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* CSS for hover effect on game item/card */
+.game-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Scaling up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover */
+}
+
+/* CSS for game images within the cards */
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* CSS for game titles within the cards */
+.game-item h3 {
+    margin: 20px 0;
+    color: #333333;
+    font-size: 18px;
+}
