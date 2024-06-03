@@ -1,27 +1,19 @@
-[
-    {
-        "name": "Game 1",
-        "link": "game1.html",
-        "image": "images/game1.png"
-    },
-    {
-        "name": "Game 2",
-        "link": "game2.html",
-        "image": "images/game2.png"
-    },
-    {
-        "name": "Game 3",
-        "link": "game3.html",
-        "image": "images/game3.png"
-    },
-    {
-        "name": "Game 4",
-        "link": "game4.html",
-        "image": "images/game4.png"
-    },
-    {
-        "name": "Game 5",
-        "link": "game5.html",
-        "image": "images/game5.png"
-    }
-]
+{
+    "games": [
+        {
+            "name": "Game 1",
+            "link": "http://example.com/game1",
+            "thumbnail": "images/game1.jpg"
+        },
+        {
+            "name": "Game 2",
+            "link": "http://example.com/game2",
+            "thumbnail": "images/game2.jpg"
+        },
+        {
+            "name": "Game 3",
+            "link": "http://example.com/game3",
+            "thumbnail": "images/game3.jpg"
+        }
+    ]
+}
