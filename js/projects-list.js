@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('games.json')
+    fetch('projects.json')
         .then(response => response.json())
         .then(data => {
             const gameList = document.getElementById('game-list');
