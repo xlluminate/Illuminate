@@ -22,9 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => {
             const link = card.querySelector('a');
             const gameName = link.textContent;
-            const gameUrl = new URL(link.href);
-            const gameLink = gameUrl.searchParams.get('url');
-            const thumbnail = gameLink.replace('index.html', 'cover.png');
+            const gameUrl = link.href;
+            let thumbnail;
+
+            if (gameUrl.includes('?game=')) {
+                // Flash game
+                const gameParam = new URL(gameUrl).searchParams.get('game');
+                thumbnail = `projects/flash/${gameParam}.png`;
+            } else {
+                // HTML5 game
+                const gameLink = new URL(gameUrl).searchParams.get('url');
+                thumbnail = gameLink.replace('index.html', 'cover.png');
+            }
 
             const gameItem = document.createElement('div');
             gameItem.classList.add('game-item');
