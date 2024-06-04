@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
-                thumbnail = gameLink.replace('index.html', 'cover.png');
+                thumbnail = gameLink.replace(/index\.html?$/, 'cover.png');
             }
 
             const gameItem = document.createElement('div');
