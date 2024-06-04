@@ -15,5 +15,15 @@
             "link": "http://example.com/game3",
             "thumbnail": "images/game3.jpg"
         }
+        {
+            "name": "Game 3",
+            "link": "http://example.com/game3",
+            "thumbnail": "images/game3.jpg"
+        }
+        {
+            "name": "Game 3",
+            "link": "http://example.com/game3",
+            "thumbnail": "images/game3.jpg"
+        }
     ]
 }
