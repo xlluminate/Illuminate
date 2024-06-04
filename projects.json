@@ -1,9 +1,9 @@
 {
     "games": [
         {
-            "name": "Game 1",
-            "link": "http://example.com/game1",
-            "thumbnail": "images/game1.jpg"
+            "name": "1",
+            "link": "project.html?url=https://projectassets.teacherease.net/1/index.html",
+            "thumbnail": "https:/projectassets.teacherease.net/1/cover.png"
         },
         {
             "name": "Game 2",
