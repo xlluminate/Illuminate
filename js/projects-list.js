@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (gameUrl.includes('?game=')) {
                 // Flash game
                 const gameParam = new URL(gameUrl).searchParams.get('game');
-                thumbnail = `projects/flash/images/${gameParam}.png`;
+                thumbnail = `https://projectassets.teacherease.net/flash/images/${gameParam}.png`;
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
