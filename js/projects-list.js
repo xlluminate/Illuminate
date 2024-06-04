@@ -2,52 +2,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
 
-    // Function to extract games data from existing HTML structure
-    function extractGameData() {
-        const games = [];
-        const cards = document.querySelectorAll('.card a');
-
-        cards.forEach(card => {
-            const url = card.href;
-            const name = card.textContent;
-            const thumbnail = url.replace('index.html', 'cover.png').replace('project.html?url=', '');
-
-            games.push({ name, link: url, thumbnail });
-        });
-
-        return games;
+    // Function to fetch the game list from the external HTML file
+    function fetchGameList() {
+        return fetch('path/to/games.html')
+            .then(response => response.text())
+            .catch(error => {
+                console.error('Error fetching game list:', error);
+                return '';
+            });
     }
 
-    // Function to load games from extracted data
-    function loadGames(games) {
-        games.forEach(game => {
+    // Function to create game items from the fetched HTML
+    function createGameItems(html) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+
+        const cards = tempDiv.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const link = card.querySelector('a');
+            const gameName = link.textContent;
+            const gameUrl = new URL(link.href);
+            const gameLink = gameUrl.searchParams.get('url');
+            const thumbnail = gameLink.replace('index.html', 'cover.png');
+
             const gameItem = document.createElement('div');
             gameItem.classList.add('game-item');
 
             const gameImage = document.createElement('img');
-            gameImage.src = game.thumbnail;
-            gameImage.alt = game.name;
+            gameImage.src = thumbnail;
+            gameImage.alt = gameName;
 
             const gameTitle = document.createElement('h3');
-            gameTitle.textContent = game.name;
+            gameTitle.textContent = gameName;
 
             gameItem.appendChild(gameImage);
             gameItem.appendChild(gameTitle);
             gameItem.onclick = () => {
-                window.location.href = game.link;
+                window.location.href = link.href;
             };
 
             gameList.appendChild(gameItem);
         });
     }
 
-    // Extract games data from existing HTML
-    const gamesData = extractGameData();
+    // Fetch and load the game list
+    fetchGameList().then(html => {
+        // Hide loading indicator
+        loadingIndicator.style.display = 'none';
 
-    // Hide loading indicator
-    loadingIndicator.style.display = 'none';
-
-    // Load games
-    loadGames(gamesData);
+        // Create game items
+        createGameItems(html);
+    });
 });
-
