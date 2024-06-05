@@ -74,6 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function search() {
         const searchTerm = searchInput.value.toLowerCase();
+        if (!gameList) {
+            console.error('Game list element not found');
+            return;
+        }
+
         gameList.innerHTML = ''; // Clear current game list
 
         // Filter and display games based on search term
@@ -91,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
     randomButton.addEventListener('click', random);
 
     function random() {
+        if (!gameList) {
+            console.error('Game list element not found');
+            return;
+        }
+
         gameList.innerHTML = ''; // Clear current game list
         const randomIndex = Math.floor(Math.random() * allGames.length);
         gameList.appendChild(allGames[randomIndex]);
