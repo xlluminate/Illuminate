@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
+    let allGames = []; // Store all game items here
 
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             gameList.appendChild(gameItem);
+            allGames.push(gameItem); // Store the game item in allGames array
         });
     }
 
@@ -63,11 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game items
         createGameItems(html);
     });
-});
 
-var allElements = [];
-var num = 760;
-for (let i = 0; i < num; i++) {
-    allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
-    document.querySelector('.game-item').remove();
-}
+    // Search functionality
+    const searchButton = document.getElementById('search-btn');
+    const searchInput = document.getElementById('search');
+
+    searchButton.addEventListener('click', search);
+
+    function search() {
+        const searchTerm = searchInput.value.toLowerCase();
+        gameList.innerHTML = ''; // Clear current game list
+
+        // Filter and display games based on search term
+        allGames.forEach(gameItem => {
+            const gameTitle = gameItem.querySelector('h3').textContent.toLowerCase();
+            if (gameTitle.includes(searchTerm)) {
+                gameList.appendChild(gameItem);
+            }
+        });
+    }
+
+    // Random game functionality
+    const randomButton = document.getElementById('random-btn');
+
+    randomButton.addEventListener('click', random);
+
+    function random() {
+        gameList.innerHTML = ''; // Clear current game list
+        const randomIndex = Math.floor(Math.random() * allGames.length);
+        gameList.appendChild(allGames[randomIndex]);
+    }
+});
