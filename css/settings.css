@@ -1,18 +1,18 @@
-     /* CSS for Settings Page */
+      /* CSS for Settings Page */
         body {
             font-family: "Noto Serif", serif;
             font-optical-sizing: auto;
-            font-weight: 300%;
+            font-weight: 300;
             font-style: normal;
             font-variation-settings: "wdth" 100;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5; /* Light grey background */
+            background-color: #ffffcc; /* Light yellow background */
             color: #333333;
         }
         
         header {
-            background-color: #ffffff; /* White for header */
+            background-color: #ffff99; /* Light yellow for header */
             color: #333333;
             padding: 10px 0;
             text-align: center;
@@ -21,8 +21,7 @@
         
         .top-nav {
             padding: 10px;
-            background-color: #4169E1; /* Blue for top navigation */
-            transform: translateY(-5px);
+            background-color: #e1e136; /* Dark yellow for top navigation */
         }
         
         nav.top-nav ul {
@@ -38,7 +37,7 @@
         }
         
         nav.top-nav ul li a {
-            color: #ffffff; /* White text color */
+            color: #333333;
             text-decoration: none;
             padding: 10px 20px;
             font-size: 18px;
@@ -47,7 +46,7 @@
         }
         
         nav.top-nav ul li a:hover {
-            background-color: #3a5dc7; /* Darker blue on hover */
+            background-color: #d4d435; /* Slightly darker yellow on hover */
         }
         
         h1 {
@@ -65,7 +64,7 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: #ffffe6; /* Very light yellow for container */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -79,7 +78,7 @@
             border-radius: 0px;
             border: 1px solid #cccccc;
             color: #333333;
-            background-color: #ffffff; /* White for inputs */
+            background-color: #ffffe6; /* Very light yellow for inputs */
             padding: 0 15px;
             margin-bottom: 10px;
             box-sizing: border-box;
@@ -89,19 +88,19 @@
 
         input:focus {
             outline: none;
-            background-color: #e8e8e8; /* Slightly darker grey when clicked on */
+            background-color: #ffffcc; /* Slightly darker yellow when clicked on */
         }
 
         input:hover {
-            background-color: #e8e8e8; /* Slightly darker grey when hovered on */
+            background-color: #ffffcc; /* Slightly darker yellow when hovered on */
             transition: background-color 0.3s ease;
         }
 
         button {
             height: 40px;
             border-radius: 6px;
-            background-color: #4169E1; /* Blue for buttons */
-            color: #ffffff;
+            background-color: #e1e136; /* Dark yellow for buttons */
+            color: #333333;
             padding: 0 20px;
             margin-top: 30px;
             margin-bottom: 30px;
@@ -111,8 +110,8 @@
         }
 
         button:hover {
-            background-color: #3a5dc7; /* Darker blue when hovered on */
-            color: #ffffff;
+            background-color: #d4d435; /* Slightly darker yellow when hovered on */
+            color: #666666;
         }
 
         .spacer {
