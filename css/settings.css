@@ -1,175 +1,120 @@
-/* Shared styles for all pages */
-body {
-    font-family: "Noto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 300%;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333333;
-}
+     /* CSS for Settings Page */
+        body {
+            font-family: "Noto Serif", serif;
+            font-optical-sizing: auto;
+            font-weight: 300%;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light grey background */
+            color: #333333;
+        }
+        
+        header {
+            background-color: #ffffff; /* White for header */
+            color: #333333;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+        }
+        
+        .top-nav {
+            padding: 10px;
+            background-color: #4169E1; /* Blue for top navigation */
+            transform: translateY(-5px);
+        }
+        
+        nav.top-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        nav.top-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        nav.top-nav ul li a {
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav.top-nav ul li a:hover {
+            background-color: #3a5dc7; /* Darker blue on hover */
+        }
+        
+        h1 {
+            margin-top: 30px;
+            color: #333333;
+        }
+        
+        p {
+            color: #333333;
+            font-size: 18px;
+            text-align: center;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-h1 {
-    text-align: center;
-}
+        .center {
+            text-align: center;
+        }
 
-.section {
-    margin-bottom: 30px;
-}
+        input {
+            height: 40px;
+            border-radius: 0px;
+            border: 1px solid #cccccc;
+            color: #333333;
+            background-color: #ffffff; /* White for inputs */
+            padding: 0 15px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            width: calc(100% - 30px);
+            transition: background-color 0.3s ease;
+        }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+        input:focus {
+            outline: none;
+            background-color: #e8e8e8; /* Slightly darker grey when clicked on */
+        }
 
-.tab-mask, .theme-options {
-    display: flex;
-    flex-direction: column;
-}
+        input:hover {
+            background-color: #e8e8e8; /* Slightly darker grey when hovered on */
+            transition: background-color 0.3s ease;
+        }
 
-.icon-mask, .title-mask {
-    margin-bottom: 20px;
-}
+        button {
+            height: 40px;
+            border-radius: 6px;
+            background-color: #4169E1; /* Blue for buttons */
+            color: #ffffff;
+            padding: 0 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-.icon-mask h3, .title-mask h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-}
+        button:hover {
+            background-color: #3a5dc7; /* Darker blue when hovered on */
+            color: #ffffff;
+        }
 
-select, input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark text color */
-    margin-top: 5px;
-}
-
-.theme-options label {
-    margin-right: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4169E1; /* Button background color */
-    color: #ffffff; /* Button text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-    background-color: #3a5dc7; /* Darker button background on hover */
-}
-
-/* Additional styles for settings page */
-.icon-mask select, .title-mask input[type="text"] {
-    margin-top: 5px;
-}
-
-.theme-options input[type="radio"] {
-    margin-right: 10px;
-    display: none; /* Hide the radio buttons */
-}
-
-.theme-options label {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark text color */
-}
-
-/* Accent color: Light grey */
-.light-grey {
-    color: #666666; /* Dark grey text */
-    background-color: #f5f5f5; /* Light grey background */
-    border: 1px solid #cccccc; /* Light grey border */
-    border-radius: 5px;
-}
-
-.light-grey:hover {
-    background-color: #e8e8e8; /* Slightly darker grey on hover */
-}
-
-/* Styles for icon select */
-#iconSelect {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark text color */
-    margin-top: 5px;
-}
-
-/* Additional styles */
-.icon-mask select, .title-mask input[type="text"] {
-    margin-top: 5px;
-}
-
-.theme-options input[type="radio"] {
-    margin-right: 10px;
-    display: none; /* Hide the radio buttons */
-}
-
-.theme-options label {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Accent color: Light grey */
-.light-grey {
-    color: #666666; /* Dark grey text */
-    background-color: #f5f5f5; /* Light grey background */
-    border: 1px solid #cccccc; /* Light grey border */
-    border-radius: 5px;
-}
-
-.light-grey:hover {
-    background-color: #e8e8e8; /* Slightly darker grey on hover */
-}
-
-/* Styles for icon select */
-#iconSelect {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    color: #333333;
-    margin-top: 5px;
-}
-
-/* Restoring light-yellow and light-yellow:hover styles */
-.light-yellow {
-    color: #666600; /* Darker shade of yellow */
-    background-color: #ffffcc; /* Light yellow */
-    border: 1px solid #cccc99; /* Lighter shade of grey */
-    border-radius: 5px;
-}
-
-.light-yellow:hover {
-    background-color: #ffffb3; /* Slightly darker shade of yellow on hover */
-}
+        .spacer {
+            height: 100px;
+        }
