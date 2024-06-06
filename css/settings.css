@@ -1,10 +1,14 @@
 /* Shared styles for all pages */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300%;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333333;
 }
 
 .container {
@@ -49,6 +53,9 @@ select, input[type="text"] {
     border: 1px solid #cccccc;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    margin-top: 5px;
 }
 
 .theme-options label {
@@ -57,15 +64,16 @@ select, input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: #4169E1;
-    color: #ffffff;
+    background-color: #4169E1; /* Button background color */
+    color: #ffffff; /* Button text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #3a5dc7;
+    background-color: #3a5dc7; /* Darker button background on hover */
 }
 
 /* Additional styles for settings page */
@@ -84,18 +92,62 @@ button:hover {
     border: 1px solid #cccccc;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
 }
 
-/* Accent color: Light yellow */
-.light-yellow {
-    color: #666600; /* Darker shade of yellow */
-    background-color: #ffffcc; /* Light yellow */
-    border: 1px solid #cccc99; /* Lighter shade of grey */
+/* Accent color: Light grey */
+.light-grey {
+    color: #666666; /* Dark grey text */
+    background-color: #f5f5f5; /* Light grey background */
+    border: 1px solid #cccccc; /* Light grey border */
     border-radius: 5px;
 }
 
-.light-yellow:hover {
-    background-color: #ffffb3; /* Slightly darker shade of yellow on hover */
+.light-grey:hover {
+    background-color: #e8e8e8; /* Slightly darker grey on hover */
+}
+
+/* Styles for icon select */
+#iconSelect {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    margin-top: 5px;
+}
+
+/* Additional styles */
+.icon-mask select, .title-mask input[type="text"] {
+    margin-top: 5px;
+}
+
+.theme-options input[type="radio"] {
+    margin-right: 10px;
+    display: none; /* Hide the radio buttons */
+}
+
+.theme-options label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Accent color: Light grey */
+.light-grey {
+    color: #666666; /* Dark grey text */
+    background-color: #f5f5f5; /* Light grey background */
+    border: 1px solid #cccccc; /* Light grey border */
+    border-radius: 5px;
+}
+
+.light-grey:hover {
+    background-color: #e8e8e8; /* Slightly darker grey on hover */
 }
 
 /* Styles for icon select */
@@ -108,4 +160,16 @@ button:hover {
     background-color: #ffffff;
     color: #333333;
     margin-top: 5px;
+}
+
+/* Restoring light-yellow and light-yellow:hover styles */
+.light-yellow {
+    color: #666600; /* Darker shade of yellow */
+    background-color: #ffffcc; /* Light yellow */
+    border: 1px solid #cccc99; /* Lighter shade of grey */
+    border-radius: 5px;
+}
+
+.light-yellow:hover {
+    background-color: #ffffb3; /* Slightly darker shade of yellow on hover */
 }
