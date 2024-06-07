@@ -1,9 +1,10 @@
-//var allElements = [];
-//var num = 760;
-//for (let i = 0; i < num; i++) {
-    //allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
-    //document.querySelector('.game-item').remove();
-//}
+function initGames() {
+    var allElements = [];
+    var num = 760;
+    for (let i = 0; i < num; i++) {
+        allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
+        document.querySelector('.game-item').remove();
+}
 //document.querySelector('#game-list').innerHTML = allElements;
 function writeAll() {
     for (let i = 0; i < allElements.length; i++) {
