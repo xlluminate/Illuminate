@@ -26,22 +26,6 @@ function setTheme() {
     applyTheme(theme);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var themeSelect = document.getElementById('theme');
-    if (!themeSelect) {
-        console.error('Theme select element not found');
-        return;
-    }
-
-    var savedTheme = getCookie('theme');
-    if (savedTheme) {
-        themeSelect.value = savedTheme;
-        applyTheme(savedTheme);
-    } else {
-        applyTheme('light');
-    }
-});
-
 function apply() {
     setCookie('title', document.getElementById('title').value, '30');
     setCookie('favicon', document.getElementById('favicon').value, '30');
