@@ -106,7 +106,7 @@ nav.top-nav ul li a:hover {
 
 .game-item img {
     width: 100%;
-    height: auto;
+    height: 80%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
