@@ -1,41 +1,42 @@
-      /* CSS for Settings Page */
+       /* Shared styles for all pages */
         body {
             font-family: "Noto Serif", serif;
             font-optical-sizing: auto;
-            font-weight: 300;
+            font-weight: 300%;
             font-style: normal;
             font-variation-settings: "wdth" 100;
             margin: 0;
             padding: 0;
-            background-color: #ffffcc; /* Light yellow background */
+            background-color: #f5f5f5; /* Light grey background */
             color: #333333;
         }
-        
+
         header {
-            background-color: #ffff99; /* Light yellow for header */
+            background-color: #e8e8e8; /* Medium grey for header */
             color: #333333;
-            padding: 10px 0;
+            padding: 1px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
         }
-        
+
         .top-nav {
             padding: 10px;
-            background-color: #e1e136; /* Dark yellow for top navigation */
+            background-color: #d8d8d8; /* Dark grey for top navigation */
+            transform: translateY(-5px);
         }
-        
+
         nav.top-nav ul {
             margin: 0;
             padding: 0;
             list-style: none;
             text-align: center;
         }
-        
+
         nav.top-nav ul li {
             display: inline-block;
             margin: 0 10px;
         }
-        
+
         nav.top-nav ul li a {
             color: #333333;
             text-decoration: none;
@@ -44,19 +45,16 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        
+
         nav.top-nav ul li a:hover {
-            background-color: #d4d435; /* Slightly darker yellow on hover */
+            background-color: #c1c1c1; /* Slightly darker grey on hover */
         }
-        
-        h1 {
-            margin-top: 30px;
+
+        #subtitle {
+            font-size: 20px;
             color: #333333;
-        }
-        
-        p {
-            color: #333333;
-            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
             text-align: center;
         }
 
@@ -64,9 +62,11 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #ffffe6; /* Very light yellow for container */
+            background-color: #ffffff; /* White background for container */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative; /* Ensure relative positioning for absolute positioning of the GitHub button */
         }
 
         .center {
@@ -75,10 +75,10 @@
 
         input {
             height: 40px;
-            border-radius: 0px;
-            border: 1px solid #cccccc;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0; /* Slightly darker grey for inputs */
             color: #333333;
-            background-color: #ffffe6; /* Very light yellow for inputs */
+            background-color: #ffffcc; /* Pale yellow for inputs */
             padding: 0 15px;
             margin-bottom: 10px;
             box-sizing: border-box;
@@ -88,30 +88,27 @@
 
         input:focus {
             outline: none;
-            background-color: #ffffcc; /* Slightly darker yellow when clicked on */
         }
 
         input:hover {
-            background-color: #ffffcc; /* Slightly darker yellow when hovered on */
-            transition: background-color 0.3s ease;
+            background-color: #ffff99; /* Lighter shade of yellow on hover */
         }
 
         button {
             height: 40px;
             border-radius: 6px;
-            background-color: #e1e136; /* Dark yellow for buttons */
+            background-color: #ffffcc; /* Pale yellow for buttons */
             color: #333333;
             padding: 0 20px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             cursor: pointer;
             border: none;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         button:hover {
-            background-color: #d4d435; /* Slightly darker yellow when hovered on */
-            color: #666666;
+            background-color: #ffff99; /* Lighter shade of yellow on hover */
+            color: #666666; /* Darker grey text color on hover */
         }
 
         .spacer {
