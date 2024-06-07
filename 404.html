@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-link" rel="stylesheet" href="/css/index.css">
     <title>404 - Page Not Found</title>
     <style>
         body {
@@ -34,32 +35,6 @@
         <p>The page you are looking for might have been removed or doesn't exist.</p>
         <p>Go back to <a href="/">home page</a>.</p>
     </div>
-    <script>
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(";");
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == " ") c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        
-        var pageTitle = getCookie('title');
-        if (!(pageTitle == null)) {
-            document.title = pageTitle
-        }
-        var faviconLink = getCookie('favicon');
-        if (!(faviconLink == null)) {
-            var link = document.querySelector("link[rel~='icon']");
-            if (!link) {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                document.head.appendChild(link);
-            }
-            link.href = faviconLink;
-        }
-    </script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
