@@ -1,3 +1,15 @@
+// Settings JavaScript
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(";");
@@ -9,18 +21,47 @@ function getCookie(name) {
     return null;
 }
 
-var pageTitle = getCookie('title');
-if (!(pageTitle == null)) {
-    document.title = pageTitle
-}
-var faviconLink = getCookie('favicon');
-if (!(faviconLink == null)) {
-    var link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-        link = document.createElement('link');
-        link.rel = 'icon';
-        document.head.appendChild(link);
-    }
-    link.href = faviconLink;
+function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999;";
 }
 
+function apply() {
+    setCookie('title', document.getElementById('title').value, '30');
+    setCookie('favicon', document.getElementById('favicon').value, '30');
+}
+
+function reset() {
+    eraseCookie('title');
+    eraseCookie('favicon');
+}
+
+function applyTheme(theme) {
+    var themeLink = document.getElementById('theme-link');
+    if (theme === 'dark') {
+        console.log('Applying dark theme');
+        themeLink.href = 'css/dark.css';
+    } else {
+        console.log('Applying light theme');
+        themeLink.href = 'css/index.css';
+    }
+    console.log('Theme link href set to:', themeLink.href);
+}
+
+function setTheme() {
+    var theme = document.getElementById('theme').value;
+    console.log('Setting theme to:', theme);
+    setCookie('theme', theme, 30);
+    applyTheme(theme);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var savedTheme = getCookie('theme');
+    if (savedTheme) {
+        console.log('Saved theme found:', savedTheme);
+        document.getElementById('theme').value = savedTheme;
+        applyTheme(savedTheme);
+    } else {
+        console.log('No saved theme found, applying default');
+        applyTheme('light');
+    }
+});
