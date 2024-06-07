@@ -325,8 +325,3 @@ button:hover {
     background-color: #ffff99; /* Lighter shade of yellow on hover */
     color: #666666; /* Darker grey text color on hover */
 }
-
-.spacer {
-    height: 100px;
-}
-
