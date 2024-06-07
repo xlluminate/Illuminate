@@ -191,13 +191,20 @@ button#search-btn:hover {
     color: #666666; /* Darker grey text color on hover */
 }
 button {
-    transform: translateX(-20px);
-    background-color: #444444; /* Dark grey for button */
-    border: 0;
-}
-button:hover {
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ffffcc; /* Pale yellow for buttons */
+    color: #333333;
+    padding: 0 20px;
+    margin-bottom: 10px;
     cursor: pointer;
-    background-color: #555555; /* Medium grey when hovered */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
 }
 /* CSS for random game button */
 button#random-btn {
@@ -309,19 +316,3 @@ input:hover {
     background-color: #ffff99; /* Lighter shade of yellow on hover */
 }
 
-button {
-    height: 40px;
-    border-radius: 6px;
-    background-color: #ffffcc; /* Pale yellow for buttons */
-    color: #333333;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ffff99; /* Lighter shade of yellow on hover */
-    color: #666666; /* Darker grey text color on hover */
-}
