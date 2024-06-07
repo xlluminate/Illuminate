@@ -21,7 +21,7 @@ function writeNew() {
 }
 writeAll();
 function search() {
-    document.querySelector('#game-list-list').innerHTML = '';
+    document.querySelector('#game-list').innerHTML = '';
     writeAll();
     value = document.getElementById('search').value;
     elements = [];
