@@ -24,9 +24,9 @@ function applyTheme(theme) {
     var themeLink = document.getElementById('theme-link');
     if (themeLink) {
         if (theme === 'dark') {
-            themeLink.href = 'css/dark.css';
+            themeLink.href = '/css/dark.css'; // 1 slash made a huge difference
         } else {
-            themeLink.href = 'css/index.css';
+            themeLink.href = '/css/index.css'; // 1 slash made a huge difference
         }
     } else {
         console.error('Theme link element not found');
