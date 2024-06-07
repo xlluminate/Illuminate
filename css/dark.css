@@ -57,6 +57,9 @@ nav.top-nav ul li a:hover {
   margin-bottom: 20px;
   text-align: center;
 }
+.center {
+    text-align: center;
+}
 
 .container {
     max-width: 800px;
@@ -283,7 +286,8 @@ button#random-btn:hover {
     background-color: #ffffcc; /* Light yellow background */
     border-radius: 10px;
     box-shadow: 0 2px 4
-/* Styles for the theme selection container in dark mode */
+
+
 .theme-container {
     text-align: center;
     margin: 20px 0;
@@ -311,9 +315,4 @@ button#random-btn:hover {
 .theme-container select:hover {
     background-color: #444444; /* Slightly darker grey on hover */
 }
-
-.center {
-    text-align: center;
-}
-
 
