@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const gameLinkNew = document.createElement('a');
             gameLinkNew.href = link.href;
+            gameLinkNew.classList.add('game-link');
             
             gameLinkNew.appendChild(gameImage);
             gameLinkNew.appendChild(gameTitle);
