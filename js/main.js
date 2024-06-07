@@ -10,11 +10,12 @@ function getCookie(name) {
 }
 
 var pageTitle = getCookie('title');
-if (!(pageTitle == null)) {
-    document.title = pageTitle
+if (pageTitle !== null) {
+    document.title = pageTitle;
 }
+
 var faviconLink = getCookie('favicon');
-if (!(faviconLink == null)) {
+if (faviconLink !== null) {
     var link = document.querySelector("link[rel~='icon']");
     if (!link) {
         link = document.createElement('link');
@@ -24,27 +25,24 @@ if (!(faviconLink == null)) {
     link.href = faviconLink;
 }
 
-function applyTheme(theme) {
-    var themeLink = document.getElementById('theme-link');
-    if (theme === 'dark') {
-        themeLink.href = 'css/dark.css';
-    } else {
-        themeLink.href = 'css/index.css';
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-    var themeSelect = document.getElementById('theme');
-    if (!themeSelect) {
-        console.error('Theme select element not found');
-        return;
-    }
-
     var savedTheme = getCookie('theme');
     if (savedTheme) {
-        themeSelect.value = savedTheme;
         applyTheme(savedTheme);
     } else {
         applyTheme('light');
     }
 });
+
+function applyTheme(theme) {
+    var themeLink = document.getElementById('theme-link');
+    if (themeLink) {
+        if (theme === 'dark') {
+            themeLink.href = 'css/dark.css';
+        } else {
+            themeLink.href = 'css/index.css';
+        }
+    } else {
+        console.error('Theme link element not found');
+    }
+}
