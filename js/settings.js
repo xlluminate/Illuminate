@@ -22,10 +22,14 @@ function getCookie(name) {
 
 function applyTheme(theme) {
     var themeLink = document.getElementById('theme-link');
-    if (theme === 'dark') {
-        themeLink.href = 'css/dark.css';
+    if (themeLink) {
+        if (theme === 'dark') {
+            themeLink.href = 'css/dark.css';
+        } else {
+            themeLink.href = 'css/index.css';
+        }
     } else {
-        themeLink.href = 'css/index.css';
+        console.error('Theme link element not found');
     }
 }
 
@@ -50,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         applyTheme('light');
     }
 });
+
 function apply() {
     setCookie('title', document.getElementById('title').value, '30');
     setCookie('favicon', document.getElementById('favicon').value, '30');
