@@ -255,3 +255,31 @@ button#random-btn:hover {
     background-color: #ffffcc; /* Light yellow background */
     border-radius: 10px;
     box-shadow: 0 2px 4
+/* Styles for the theme selection container in dark mode */
+.theme-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Styles for the theme selection label in dark mode */
+.theme-container label {
+    font-size: 18px;
+    color: #f5f5f5;
+    margin-right: 10px;
+}
+
+/* Styles for the theme selection dropdown in dark mode */
+.theme-container select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444444;
+    background-color: #333333; /* Dark grey background */
+    color: #f5f5f5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles for the theme selection dropdown on hover in dark mode */
+.theme-container select:hover {
+    background-color: #444444; /* Slightly darker grey on hover */
+}
