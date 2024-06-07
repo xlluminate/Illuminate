@@ -17,30 +17,6 @@ function setGameServer(server) {
     });
 }
 
-// Function to handle theme selection
-function handleThemeSelection(theme) {
-    switch (theme) {
-        case 'light':
-            setTheme('light');
-            break;
-        case 'dark':
-            setTheme('dark');
-            break;
-    }
-}
-
-// Function to handle game server selection
-function handleServerSelection(server) {
-    switch (server) {
-        case 'teacherease':
-            setGameServer('projectassets.teacherease.net');
-            break;
-        case 'schoolfacts':
-            setGameServer('projectassets.schoolfacts.xyz');
-            break;
-    }
-}
-
 // Event listener for theme selection
 document.querySelectorAll('input[name="theme"]').forEach(function(input) {
     input.addEventListener('change', function() {
