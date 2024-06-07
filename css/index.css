@@ -280,3 +280,12 @@ button#random-btn:hover {
     color: #333333;
     font-size: 18px;
 }
+
+/* CSS for game links within the cards */
+.game-item a {
+    color: #333333;
+    text-decoration: none;
+}
+.game-item a:hover {
+    text-decoration: none;
+}
