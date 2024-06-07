@@ -1,3 +1,9 @@
+var allElements = [];
+var num = 767;
+var elements = [];
+var elementsNew = [];
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
@@ -63,33 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game items
         createGameItems(html);
     });
+    setupGames();
 });
 
-var allElements = [];
-var num = 767;
-function initGames() {
-    for (let i = 0; i < num; i++) {
-        allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
-        document.querySelector('.game-item').remove();
+function setupGames() {
+    function initGames() {
+        for (let i = 0; i < num; i++) {
+            allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
+            document.querySelector('.game-item').remove();
+        }
     }
-}
-function writeAll() {
-    for (let i = 0; i < allElements.length; i++) {
-        document.querySelector('#game-list').innerHTML += allElements[i];
+    function writeAll() {
+        for (let i = 0; i < allElements.length; i++) {
+            document.querySelector('#game-list').innerHTML += allElements[i];
+        }
     }
-}
-var elements = [];
-var elementsNew = [];
-function writeNew() {
-    for (let i = 0; i < elementsNew.length; i++) {
-        document.querySelector('#game-list').innerHTML += elementsNew[i];
+    function writeNew() {
+        for (let i = 0; i < elementsNew.length; i++) {
+            document.querySelector('#game-list').innerHTML += elementsNew[i];
+        }
     }
-}
-initGames();
-writeAll();
+    initGames();
+    writeAll();
 
-function random() {
-    var game = Math.floor(Math.random() * allElements.length);
-    document.querySelector('#game-list').innerHTML = '';
-    document.querySelector('#game-list').innerHTML += allElements[game];
-} 
+}
