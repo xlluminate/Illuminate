@@ -75,13 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameTitle = document.createElement('h3');
             gameTitle.textContent = gameName;
             
-            gameItem.appendChild(gameLink);
             gameItem.appendChild(gameImage);
             gameItem.appendChild(gameTitle);
             //gameItem.onclick = () => {
                 //window.location.href = link.href;
             //};
 
+            gameItem.appendChild(gameLink);
             gameList.appendChild(gameItem);
         });
     }
