@@ -45,6 +45,13 @@
             <p>Once you click on the button below, you will be asked to enter all game data. To do this, open the 'data.txt' file, copy all the text, and paste it in the input.</p>
             <button onclick="window.open('https://projectassets.teacherease.net/minecraftgoldfish3/more/data/load.html')">Load Game Data</button>
             <div class="spacer"></div>
+            <div>
+            <label for="theme">Choose theme:</label>
+            <select id="theme" onchange="setTheme()">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
         </div>
     </div>
     <script src="js/settings.js"></script>
