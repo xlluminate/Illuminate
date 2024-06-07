@@ -280,3 +280,31 @@ button#random-btn:hover {
     color: #333333;
     font-size: 18px;
 }
+/* Styles for the theme selection container */
+.theme-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Styles for the theme selection label */
+.theme-container label {
+    font-size: 18px;
+    color: #333333;
+    margin-right: 10px;
+}
+
+/* Styles for the theme selection dropdown */
+.theme-container select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles for the theme selection dropdown on hover */
+.theme-container select:hover {
+    background-color: #e8e8e8; /* Slightly darker grey on hover */
+}
