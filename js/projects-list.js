@@ -73,4 +73,23 @@ function initGames() {
         document.querySelector('.game-item').remove();
     }
 }
+function writeAll() {
+    for (let i = 0; i < allElements.length; i++) {
+        document.querySelector('#game-list').innerHTML += allElements[i];
+    }
+}
+var elements = [];
+var elementsNew = [];
+function writeNew() {
+    for (let i = 0; i < elementsNew.length; i++) {
+        document.querySelector('#game-list').innerHTML += elementsNew[i];
+    }
+}
 initGames();
+writeAll();
+
+function random() {
+    var game = Math.floor(Math.random() * allElements.length);
+    document.querySelector('#game-list').innerHTML = '';
+    document.querySelector('#game-list').innerHTML += allElements[game];
+} 
