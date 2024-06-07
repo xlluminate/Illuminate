@@ -75,3 +75,4 @@ function initGames() {
 }
     
 initGames();
+console.log(allElements);
