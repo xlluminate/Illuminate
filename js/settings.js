@@ -8,10 +8,7 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
-function apply() {
-    setCookie('title', document.getElementById('title').value, '30');
-    setCookie('favicon', document.getElementById('favicon').value, '30');
-}
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(";");
@@ -22,10 +19,41 @@ function getCookie(name) {
     }
     return null;
 }
+
+function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999;";
+}
+
+function apply() {
+    setCookie('title', document.getElementById('title').value, '30');
+    setCookie('favicon', document.getElementById('favicon').value, '30');
+    setTheme();
+}
+
 function reset() {
     eraseCookie('title');
     eraseCookie('favicon');
 }
-function eraseCookie(name) {
-    document.cookie = name + "=; Max-Age=-99999;";
+
+function setTheme() {
+    var theme = document.getElementById('theme').value;
+    setCookie('theme', theme, 30);
+    applyTheme();
+}
+
+function applyTheme() {
+    var theme = getCookie('theme') || 'light';
+    var link = document.getElementById('theme-link');
+    if (theme === 'dark') {
+        link.href = 'css/dark.css';
+    } else {
+        link.href = 'css/index.css';
+    }
+}
+
+window.onload = function() {
+    applyTheme();
+    // Set the selected value of the theme dropdown based on the current cookie value
+    var theme = getCookie('theme') || 'light';
+    document.getElementById('theme').value = theme;
 }
