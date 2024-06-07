@@ -20,40 +20,54 @@ function getCookie(name) {
     return null;
 }
 
-function eraseCookie(name) {
-    document.cookie = name + "=; Max-Age=-99999;";
-}
-
-function apply() {
-    setCookie('title', document.getElementById('title').value, '30');
-    setCookie('favicon', document.getElementById('favicon').value, '30');
-    setTheme();
-}
-
-function reset() {
-    eraseCookie('title');
-    eraseCookie('favicon');
+function applyTheme(theme) {
+    var themeLink = document.getElementById('theme-link');
+    if (theme === 'dark') {
+        themeLink.href = 'css/dark.css';
+    } else {
+        themeLink.href = 'css/index.css';
+    }
 }
 
 function setTheme() {
     var theme = document.getElementById('theme').value;
     setCookie('theme', theme, 30);
-    applyTheme();
+    applyTheme(theme);
 }
 
-function applyTheme() {
-    var theme = getCookie('theme') || 'light';
-    var link = document.getElementById('theme-link');
-    if (theme === 'dark') {
-        link.href = 'css/dark.css';
-    } else {
-        link.href = 'css/index.css';
+document.addEventListener('DOMContentLoaded', function() {
+    var themeSelect = document.getElementById('theme');
+    if (!themeSelect) {
+        console.error('Theme select element not found');
+        return;
     }
-}
 
-window.onload = function() {
-    applyTheme();
-    // Set the selected value of the theme dropdown based on the current cookie value
-    var theme = getCookie('theme') || 'light';
-    document.getElementById('theme').value = theme;
+    var savedTheme = getCookie('theme');
+    if (savedTheme) {
+        themeSelect.value = savedTheme;
+        applyTheme(savedTheme);
+    } else {
+        applyTheme('light');
+    }
+});
+function apply() {
+    setCookie('title', document.getElementById('title').value, '30');
+    setCookie('favicon', document.getElementById('favicon').value, '30');
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+function reset() {
+    eraseCookie('title');
+    eraseCookie('favicon');
+}
+function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999;";
 }
