@@ -65,9 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gameItem.classList.add('game-item');
             //gameItem.onclick = function() { window.location.href = link.href; }
 
-            const gameLink = document.createElement('a');
-            gameLink.href = link.href;
-
             const gameImage = document.createElement('img');
             gameImage.src = thumbnail;
             gameImage.alt = gameName;
@@ -75,13 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameTitle = document.createElement('h3');
             gameTitle.textContent = gameName;
             
-            gameItem.appendChild(gameImage);
-            gameItem.appendChild(gameTitle);
+            const gameLinkNew = document.createElement('a');
+            gameLinkNew.href = link.href;
+            gameLinkNew.innerHTML = gameImage + gameTitle;
+            
+            //gameItem.appendChild(gameImage);
+            //gameItem.appendChild(gameTitle);
             //gameItem.onclick = () => {
                 //window.location.href = link.href;
             //};
 
-            gameItem.appendChild(gameLink);
+            gameItem.appendChild(gameLinkNew);
             gameList.appendChild(gameItem);
         });
     }
