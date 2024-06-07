@@ -71,7 +71,9 @@ function initGames() {
     for (let i = 0; i < num; i++) {
         allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
         document.querySelector('.game-item').remove();
+        console.log(document.querySelector('.game-item').innerHTML);
     }
+    console.log(allElements);
 }
     
 initGames();
