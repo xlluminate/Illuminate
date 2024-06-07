@@ -23,3 +23,28 @@ if (!(faviconLink == null)) {
     }
     link.href = faviconLink;
 }
+
+function applyTheme(theme) {
+    var themeLink = document.getElementById('theme-link');
+    if (theme === 'dark') {
+        themeLink.href = 'css/dark.css';
+    } else {
+        themeLink.href = 'css/index.css';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var themeSelect = document.getElementById('theme');
+    if (!themeSelect) {
+        console.error('Theme select element not found');
+        return;
+    }
+
+    var savedTheme = getCookie('theme');
+    if (savedTheme) {
+        themeSelect.value = savedTheme;
+        applyTheme(savedTheme);
+    } else {
+        applyTheme('light');
+    }
+});
