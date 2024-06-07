@@ -95,6 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game items
         createGameItems(html);
 
-        //setupGames();
+        setupGames();
     });
 });
