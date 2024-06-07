@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const gameItem = document.createElement('div');
             gameItem.classList.add('game-item');
+            gameItem.onclick = (window.location.href = link.href);
 
             const gameImage = document.createElement('img');
             gameImage.src = thumbnail;
@@ -73,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             gameItem.appendChild(gameImage);
             gameItem.appendChild(gameTitle);
-            gameItem.onclick = () => {
-                window.location.href = link.href;
-            };
+            //gameItem.onclick = () => {
+                //window.location.href = link.href;
+            //};
 
             gameList.appendChild(gameItem);
         });
