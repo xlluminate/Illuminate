@@ -63,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const gameItem = document.createElement('div');
             gameItem.classList.add('game-item');
-            gameItem.onclick = function() { window.location.href = link.href; }
+            //gameItem.onclick = function() { window.location.href = link.href; }
+
+            const gameLink = document.createElement('a');
+            gameLink.href = link.href;
 
             const gameImage = document.createElement('img');
             gameImage.src = thumbnail;
@@ -71,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const gameTitle = document.createElement('h3');
             gameTitle.textContent = gameName;
-
+            
+            gameItem.appendChild(gameLink);
             gameItem.appendChild(gameImage);
             gameItem.appendChild(gameTitle);
             //gameItem.onclick = () => {
@@ -90,6 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game items
         createGameItems(html);
 
-        setupGames();
+        //setupGames();
     });
 });
