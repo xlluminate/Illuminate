@@ -9,6 +9,8 @@ A weekly updated unblocked games website with multiple features, including proxi
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/xlluminate/Illuminate)
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/xlluminate/Illuminate)
 
+If you're deploying to Github Pages, rename the repo to (yourusername).github.io then deploy Github Pages.
+
 Most web hosts not listed here are still supported by Illuminate. If you're forking this repo, please give it a star!
 ## Links
 Here are the current offical links for Illuminate:
