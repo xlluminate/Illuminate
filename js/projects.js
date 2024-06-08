@@ -10,14 +10,14 @@ function initGames() {
 //document.querySelector('#game-list').innerHTML = allElements;
 function writeAll() {
     for (let i = 0; i < allElements.length; i++) {
-        document.querySelector('#game-list').innerHTML += allElements[i];
+        document.querySelector('#game-list').innerHTML += '<div class="game-item">' + allElements[i].innerHTML + '</div>';
     }
 }
 var elements = [];
 var elementsNew = [];
 function writeNew() {
     for (let i = 0; i < elementsNew.length; i++) {
-        document.querySelector('#game-list').innerHTML += elementsNew[i];
+        document.querySelector('#game-list').innerHTML += '<div class="game-item">' + elementsNew[i].innerHTML + '</div>';
     }
 }
 //writeAll();
@@ -56,5 +56,5 @@ function search() {
 function random() {
     var game = Math.floor(Math.random() * allElements.length);
     document.querySelector('#game-list').innerHTML = '';
-    document.querySelector('#game-list').innerHTML += allElements[game];
+    document.querySelector('#game-list').innerHTML += '<div class="game-item">' + allElements[game].innerHTML + '</div>';
 } 
