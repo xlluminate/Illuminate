@@ -17,7 +17,7 @@ var elements = [];
 var elementsNew = [];
 function writeNew() {
     for (let i = 0; i < elementsNew.length; i++) {
-        document.querySelector('#game-list').innerHTML += '<div class="game-item">' + elementsNew[i].innerHTML + '</div>';
+        document.querySelector('#game-list').innerHTML += elementsNew[i];
     }
 }
 //writeAll();
