@@ -164,74 +164,64 @@ a:hover {
     height: 75px;
 }
 /* CSS for search bar */
-input#search {
-    height: 40px; /* Increased height */
-    border-radius: 6px;
-    border: 1px solid #e0e0e0; /* Slightly darker grey for search bar */
-    color: #333333;
-    background-color: #ffffcc; /* Pale yellow for search bar */
-    padding: 0 15px; /* Add padding to adjust the size */
-    margin-bottom: 10px; /* Add margin for spacing */
-}
-input#search:focus {
-    outline: none;
+.search-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
 }
 
-input {
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0; /* Slightly darker grey for inputs */
-    color: #333333;
-    background-color: #ffffcc; /* Pale yellow for inputs */
-    padding: 0 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    width: calc(100% - 30px);
-    transition: background-color 0.3s ease;
+.main-search {
+  width: 50vw;
+  height: 5vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+  background: #f5f5f5;
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  color: #333;
 }
 
-input:focus {
-    outline: none;
+.main-search::placeholder {
+  color: #999;
+  opacity: 1;
 }
 
-input:hover {
-    background-color: #ffff99; /* Lighter shade of yellow on hover */
+.search-btn, .random-btn {
+  height: 5vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+  background: #f5f5f5;
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* CSS for search button */
-button#search-btn {
-    height: 40px; /* Increased height */
-    border-radius: 6px;
-    background-color: #ffffcc; /* Pale yellow for button */
-    color: #333333;
-    padding: 0 20px; /* Add padding to adjust the size */
-    margin-bottom: 10px; /* Add margin for spacing */
-    cursor: pointer;
-    border: none; /* Remove default button border */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+.search-btn i {
+  font-size: 20px;
+  margin-right: 5px;
 }
 
-button#search-btn:hover {
-    background-color: #ffff99; /* Lighter shade of yellow on hover */
-    color: #666666; /* Darker grey text color on hover */
-}
-/* CSS for random game button */
-button#random-btn {
-    height: 40px; /* Increased height */
-    border-radius: 6px;
-    background-color: #ffffcc; /* Pale yellow for button */
-    color: #333333;
-    padding: 0 20px; /* Add padding to adjust the size */
-    margin-bottom: 10px; /* Add margin for spacing */
-    cursor: pointer;
-    border: none; /* Remove default button border */
-    transform: translateX(0); /* Fix position */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+.search-btn:hover, .random-btn:hover {
+  background: #e0e0e0;
 }
 
-button#random-btn:hover {
-    background-color: #ffff99; /* Lighter shade of yellow on hover */
-    color: #666666; /* Darker grey text color on hover */
+.random-btn {
+  width: 50vw;
 }
 .card {
     height: 30px;
