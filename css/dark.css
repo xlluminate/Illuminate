@@ -215,22 +215,6 @@ button#search-btn:hover {
     background-color: #ffff99; /* Lighter shade of yellow on hover */
     color: #666666; /* Darker grey text color on hover */
 }
-button {
-    height: 60px;
-    border-radius: 6px;
-    background-color: #ffffcc; /* Pale yellow for buttons */
-    color: #333333;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ffff99; /* Lighter shade of yellow on hover */
-    color: #666666; /* Darker grey text color on hover */
-}
 /* CSS for random game button */
 button#random-btn {
     height: 40px; /* Increased height */
