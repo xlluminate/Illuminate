@@ -295,7 +295,7 @@ input:hover {
 }
 
 button {
-    height: 40px;
+    height: 60px;
     border-radius: 6px;
     background-color: #ffffcc; /* Pale yellow for buttons */
     color: #333333;
