@@ -6,7 +6,7 @@ var elementsNew = [];
 function setupGames() {
     function initGames() {
         var nodeList = document.querySelectorAll('.game-item');
-        Array.from(myNodeList).forEach(function(el) {
+        Array.from(nodeList).forEach(function(el) {
             allElements.push(el);
             console.log(el);
         });
