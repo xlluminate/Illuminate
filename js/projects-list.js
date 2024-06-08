@@ -5,10 +5,15 @@ var elementsNew = [];
 
 function setupGames() {
     function initGames() {
-        for (let i = 0; i < num; i++) {
-            allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
-            document.querySelector('.game-item').remove();
-        }
+        var nodeList = document.querySelectorAll('.game-item');
+        Array.from(myNodeList).forEach(function(el) {
+            allElements.push(el);
+            console.log(el);
+        });
+        //for (let i = 0; i < num; i++) {
+            //allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
+            //document.querySelector('.game-item').remove();
+        //}
     }
     function writeAll() {
         for (let i = 0; i < allElements.length; i++) {
@@ -21,7 +26,7 @@ function setupGames() {
         }
     }
     initGames();
-    writeAll();
+    //writeAll();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
