@@ -47,3 +47,10 @@ function reset() {
 function eraseCookie(name) {
     document.cookie = name + "=; Max-Age=-99999;";
 }
+
+var theme = getCookie('theme');
+if (theme == 'light') {
+    document.getElementById('theme').value = 'light';
+} else if (theme == 'dark') {
+    document.getElementById('theme').value = 'dark';
+}
