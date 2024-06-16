@@ -1,3 +1,14 @@
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
 var allElements = [];
 var num = 769;
 var elements = [];
@@ -15,18 +26,20 @@ function setupGames() {
             //document.querySelector('.game-item').remove();
         //}
     }
+
     function writeAll() {
         for (let i = 0; i < allElements.length; i++) {
             document.querySelector('#game-list').innerHTML += allElements[i];
         }
     }
+
     function writeNew() {
         for (let i = 0; i < elementsNew.length; i++) {
             document.querySelector('#game-list').innerHTML += elementsNew[i];
         }
     }
+
     initGames();
-    //writeAll();
 }
 
 function extractFlashGameURL(href) {
@@ -64,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tempDiv.innerHTML = html;
 
         const cards = tempDiv.querySelectorAll('.card');
+        const gamedomain = getCookie('gamedomain');
 
         cards.forEach(card => {
             const link = card.querySelector('a');
@@ -73,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (gameUrl.includes('#game=')) {
                 // Flash game
-                const gameParam = extractFlashGameURL(gameUrl); //new URL(gameUrl).searchParams.get('game');
-                thumbnail = `https://projectassets.teacherease.net/flash/images/${gameParam}.png`;
+                const gameParam = extractFlashGameURL(gameUrl);
+                thumbnail = `https://${gamedomain}/flash/images/${gameParam}.png`;
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
@@ -83,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const gameItem = document.createElement('div');
             gameItem.classList.add('game-item');
-            //gameItem.onclick = function() { window.location.href = link.href; }
 
             const gameImage = document.createElement('img');
             gameImage.src = thumbnail;
@@ -91,15 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const gameTitle = document.createElement('h3');
             gameTitle.textContent = gameName;
-            
+
             const gameLinkNew = document.createElement('a');
-            gameLinkNew.href = link.href;
-            
+            gameLinkNew.href = gameUrl.includes('#game=') ? `/project.html?url=https://${gamedomain}/flash/${extractFlashGameURL(gameUrl)}` : gameUrl;
+
             gameLinkNew.appendChild(gameImage);
             gameLinkNew.appendChild(gameTitle);
-            //gameItem.onclick = () => {
-                //window.location.href = link.href;
-            //};
 
             gameItem.appendChild(gameLinkNew);
             gameList.appendChild(gameItem);
@@ -117,3 +127,4 @@ document.addEventListener('DOMContentLoaded', () => {
         setupGames();
     });
 });
+    
