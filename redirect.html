@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redirecting...</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <style>
+            button:disabled {
+                opacity: 50%;
+                cursor: default;
+            }
+        </style>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
+         crossorigin="anonymous"></script>
+    </head>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ed6f2b8e9eb340118d03074b554fb407"}'></script><!-- End Cloudflare Web Analytics -->
+    <body>
+        <header>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html">Games</a></li>
+                    <li><a href="proxies.html">Proxies</a></li>
+                    <li><a href="apps.html">Apps</a></li>
+                    <li><a href="cheats/index.html">Cheats</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="review.html">Feedback</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="other/index.html">Other</a></li>
+                    <li><a href="about-blank">about:blank</a></li>
+                </ul>
+            </nav>
+            <h1>Redirecting...</h1>
+            <p id="text"></p>
+            <p id="warning" style="color: red;"></p>
+        </header><br />
+        <div class="container">
+            <button id="continue" class="play-button" onclick="window.location.href = url;">Continue</button><br />
+        </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126"
+            crossorigin="anonymous"></script>
+        <!-- Projects Ad -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3317735030374126"
+            data-ad-slot="4276812776"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <div class="small-spacer"></div>
+        <footer>
+            <p>&copy; 2024 Illuminate. All rights reserved.</p>
+        </footer>
+        <script>
+            function extractURL() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('url=')) {
+                            return parameter.substring(4);
+                        }
+                    }
+                }
+                return null;
+            }
+            function extractType() {
+                var url = window.location.href;
+                if (url.indexOf('?') !== -1) {
+                    var queryString = url.split('?')[1];
+                    var parameters = queryString.split('&');
+                    for (var i = 0; i < parameters.length; i++) {
+                        var parameter = parameters[i];
+                        if (parameter.startsWith('type=')) {
+                            return parameter.substring(5);
+                        }
+                    }
+                }
+                return null;
+            }
+            var url = extractURL();
+            var type = extractType();
+            document.getElementById("continue").disabled = true;
+            if (url == null) {
+                document.getElementById('text').innerHTML = 'This webpage was not supposed to be accessed without a redirect URL.';
+            } else {
+                document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + 5 + ' seconds.';
+                if (type == 'external') {
+                    document.getElementById('warning').innerHTML = 'Warning: this site is an external site, so be careful.';
+                }
+                var countdown = 4;
+                var timer = setInterval(function () {
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + countdown + ' seconds.';
+                        countdown = 0;
+                        document.getElementById("continue").disabled = false;
+                    } else {
+                        document.getElementById('text').innerHTML = 'You are being redirected to ' + `<a href=\"` + url + `\">` + url + `</a>` + ' in ' + countdown + ' seconds.'
+                    }
+                    countdown -= 1;
+                }, 1000);
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
