@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Redirect Generator | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <style>
+            input#redirect-gen {
+                height: 40px;
+                border-radius: 6px;
+                border: 1px solid #e0e0e0; /* Slightly darker grey for inputs */
+                color: #333333;
+                background-color: #ffffcc; /* Pale yellow for inputs */
+                padding: 0 15px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                width: calc(100% - 30px);
+                transition: background-color 0.3s ease;
+            }
+
+                input#redirect-gen:focus {
+                    outline: none;
+                }
+
+                input#redirect-gen:hover {
+                    background-color: #ffff99; /* Lighter shade of yellow on hover */
+                }
+
+            button {
+                height: 40px;
+                border-radius: 6px;
+                background-color: #ffffcc; /* Pale yellow for buttons */
+                color: #333333;
+                padding: 0 20px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                border: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+                button:hover {
+                    background-color: #ffff99; /* Lighter shade of yellow on hover */
+                    color: #666666; /* Darker grey text color on hover */
+                }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="../../projects.html">Games</a></li>
+                        <li><a href="../../proxies.html">Proxies</a></li>
+                        <li><a href="../../cheats/index.html">Cheats</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../settings.html">Settings</a></li>
+                        <li><a href="../index.html">Other</a></li>
+                    </ul>
+                </nav>
+                <h1>Redirect Generator</h1>
+            </header>
+            <br />
+            <p>Enter a URL to redirect:</p>
+            <input id="redirect-gen" type="text" placeholder="Enter a URL..." autofocus />
+            <p>External Redirect: <input id="type" type="checkbox" checked="checked" style="font-size: 50%" /></p>
+            <button onclick="redirect();">Enter</button>
+            <div class="spacer"></div><div class="spacer"></div>
+        </div>
+        <div class="footer"><a href="/">Back to Homepage</a></div>
+        <script>
+            function redirect() {
+                var url = document.getElementById('redirect-gen').value;
+                var type = '';
+                if (document.getElementById('type').checked == true) {
+                    type = 'external';
+                } else {
+                    type = 'internal'
+                }
+                window.location.href = '/redirect.html?url=' + url + '&type=' + type;
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

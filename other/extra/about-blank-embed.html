@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>about:blank Embedder | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <style>
+            input {
+                height: 40px;
+                border-radius: 6px;
+                border: 1px solid #e0e0e0; /* Slightly darker grey for inputs */
+                color: #333333;
+                background-color: #ffffcc; /* Pale yellow for inputs */
+                padding: 0 15px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                width: calc(100% - 30px);
+                transition: background-color 0.3s ease;
+            }
+
+                input:focus {
+                    outline: none;
+                }
+
+                input:hover {
+                    background-color: #ffff99; /* Lighter shade of yellow on hover */
+                }
+
+            button {
+                height: 40px;
+                border-radius: 6px;
+                background-color: #ffffcc; /* Pale yellow for buttons */
+                color: #333333;
+                padding: 0 20px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                border: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+                button:hover {
+                    background-color: #ffff99; /* Lighter shade of yellow on hover */
+                    color: #666666; /* Darker grey text color on hover */
+                }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="../../projects.html">Games</a></li>
+                        <li><a href="../../proxies.html">Proxies</a></li>
+                        <li><a href="../../cheats/index.html">Cheats</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../settings.html">Settings</a></li>
+                        <li><a href="../index.html">Other</a></li>
+                    </ul>
+                </nav>
+                <h1>About:Blank Embedder</h1>
+            </header>
+            <br />
+            <p>Enter a URL to be embedded in an about:blank page below.</p>
+            <p><input id="url-target" placeholder="Enter a URL..." autocomplete="on" type="text" autofocus /></p>
+            <button id="create">Create page</button>
+            <button onclick="document.getElementById('url-target').value = ''">Clear input</button>
+            <div class="spacer"></div>
+            <h2>How it works:</h2>
+            <p>
+                The about:blank embedder works by putting a full screen iframe or an embedded page inside an about:blank page. Not all websites will work since not all websites are able to be embedded with an iframe.
+                The about:blank page will not be shown in your history, which adds extra security to the sites you are using. To add extra security to this site, you can just put the url of this site in the input above, or simply use the about:blank link in the navigation bar above.
+            </p>
+            <div class="spacer"></div>
+        </div>
+        <div class="footer"><a href="/">Back to Homepage</a></div>
+        <script>
+            var url = document.getElementById("url-target");
+            var urlObj = new window.URL(window.location.href);
+            document.getElementById("create").onclick = function () {
+                if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+                    url.value = 'https://' + url.value.split('https://').pop();
+                } else if (url.value.substring(0, 7) == 'http://') {
+                    url.value = 'https://' + url.value.split('http://').pop();
+                };
+                win = window.open();
+                win.document.body.style.margin = "0";
+                win.document.body.style.height = "100vh";
+                var iframe = win.document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.margin = "0";
+                iframe.referrerpolicy = "no-referrer";
+                iframe.allow = "fullscreen";
+                iframe.src = url.value;
+                win.document.body.appendChild(iframe);
+                var script = win.document.createElement("script");
+                win.document.body.appendChild(script);
+            };
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
