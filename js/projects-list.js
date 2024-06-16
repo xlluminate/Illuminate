@@ -9,6 +9,16 @@ function getCookie(name) {
     return null;
 }
 
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
 var allElements = [];
 var num = 769;
 var elements = [];
@@ -24,7 +34,7 @@ function setupGames() {
         //for (let i = 0; i < num; i++) {
             //allElements.push('<div class="game-item">' + document.querySelector('.game-item').innerHTML + '</div>');
             //document.querySelector('.game-item').remove();
-        //}
+        //}   
     }
 
     function writeAll() {
@@ -61,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
 
+    // Ensure gamedomain cookie is set
+    var gamedomain = getCookie('gamedomain');
+    if (!gamedomain) {
+        gamedomain = "projectassets.teacherease.net";
+        setCookie('gamedomain', gamedomain, 365);
+    }
+
     // Function to fetch the game list from the external HTML file
     function fetchGameList() {
         return fetch('list.html')
@@ -77,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tempDiv.innerHTML = html;
 
         const cards = tempDiv.querySelectorAll('.card');
-        const gamedomain = getCookie('gamedomain');
 
         cards.forEach(card => {
             const link = card.querySelector('a');
@@ -127,4 +143,3 @@ document.addEventListener('DOMContentLoaded', () => {
         setupGames();
     });
 });
-    
