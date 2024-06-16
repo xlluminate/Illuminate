@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameUrl = link.href;
             let thumbnail;
 
-            if (gameUrl.includes('?game=')) {
+            if (gameUrl.includes('#game=')) {
                 // Flash game
                 const gameParam = new URL(gameUrl).searchParams.get('game');
                 thumbnail = `https://projectassets.teacherease.net/flash/images/${gameParam}.png`;
