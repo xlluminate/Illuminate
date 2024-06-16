@@ -29,6 +29,21 @@ function setupGames() {
     //writeAll();
 }
 
+function extractFlashGameURL(href) {
+    var url = href;
+    if (url.indexOf('#') !== -1) {
+        var queryString = url.split('#')[1];
+        var parameters = queryString.split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var parameter = parameters[i];
+            if (parameter.startsWith('game=')) {
+                return parameter.substring(5);
+            }
+        }
+    }
+    return null;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const gameList = document.getElementById('game-list');
@@ -58,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (gameUrl.includes('#game=')) {
                 // Flash game
-                const gameParam = new URL(gameUrl).searchParams.get('game');
+                const gameParam = extractFlashGameURL(gameUrl); //new URL(gameUrl).searchParams.get('game');
                 thumbnail = `https://projectassets.teacherease.net/flash/images/${gameParam}.png`;
             } else {
                 // HTML5 game
