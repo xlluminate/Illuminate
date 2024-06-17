@@ -290,3 +290,45 @@ a:hover {
 .theme-container select:hover {
     background-color: #e8e8e8; /* Slightly darker grey on hover */
 }
+/* Container for the domain selection interface */
+.domain-selection {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+}
+
+/* Heading for the domain selection section */
+.domain-selection h2 {
+    margin-top: 0;
+    color: #ddd;
+}
+
+/* Styles for the select element and input field */
+.domain-selection select, 
+.domain-selection input[type="text"], 
+.domain-selection button {
+    display: block;
+    width: calc(100% - 24px); /* Adjusting width to fit padding */
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2e2e2e;
+    color: #ddd;
+}
+
+/* Specific styles for the button */
+.domain-selection button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the button */
+.domain-selection button:hover {
+    background-color: #0056b3;
+}
