@@ -41,10 +41,12 @@
             <h2>Save / Load Game Data:</h2>
             <h3>Saving Game Data</h3>
             <p>Click the button below to save your game data. This will make a popup window to download your game data.</p>
-            <button onclick="window.open('https://projectassets.teacherease.net/minecraftgoldfish3/more/data/save.html')">Save Game Data</button>
+            <p><b>Note:</b> This will only save game data into your current selected server. To change this server, go to the <a href="projects.html">games</a> section and select a different game server.</p>
+            <button onclick="saveData()">Save Game Data</button>
             <h3>Loading Game Data</h3>
             <p>Once you click on the button below, you will be asked to enter all game data. To do this, open the 'data.txt' file, copy all the text, and paste it in the input.</p>
-            <button onclick="window.open('https://projectassets.teacherease.net/minecraftgoldfish3/more/data/load.html')">Load Game Data</button>
+            <p><b>Note:</b> This will only load game data into your current selected server. To change this server, go to the <a href="projects.html">games</a> section and select a different game server.</p>
+            <button onclick="loadData()">Load Game Data</button>
             <div class="theme-container">
             <h2>Light / Dark Mode:</h2>
             <label for="theme">Choose theme:</label>
@@ -53,6 +55,8 @@
                 <option value="dark">Dark</option>
             </select>
             </div>
+            <h2>Game Server:</h2>
+            <p>To choose a different game server, go to the <a href="projects.html">games</a> webpage.</p>
             <div class="spacer"></div>
         </div>
     </div>
