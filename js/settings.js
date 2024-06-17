@@ -54,3 +54,14 @@ if (theme == 'light') {
 } else if (theme == 'dark') {
     document.getElementById('theme').value = 'dark';
 }
+
+function saveData() {
+    var gameServer = getCookie('gamedomain');
+    var url = 'https://' + gameServer + '/minecraftgoldfish3/more/data/save.html';
+    window.open(url);
+}
+function loadData() {
+    var gameServer = getCookie('gamedomain');
+    var url = 'https://' + gameServer + '/minecraftgoldfish3/more/data/load.html';
+    window.open(url);
+}
