@@ -100,15 +100,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameName = link.textContent;
             const gameUrl = link.href;
             let thumbnail;
+            let gameLinkNew;
 
             if (gameUrl.includes('#game=')) {
                 // Flash game
                 const gameParam = extractFlashGameURL(gameUrl);
                 thumbnail = `https://${gamedomain}/flash/images/${gameParam}.png`;
+                gameLinkNew = `/project.html?url=https://${gamedomain}/flash/${gameParam}`;
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
-                thumbnail = gameLink.replace(/index\.htm(l)?$/, 'cover.png');
+                const newUrl = gameLink.replace(/https:\/\/[^/]+/, `https://${gamedomain}`);
+                thumbnail = newUrl.replace(/index\.htm(l)?$/, 'cover.png');
+                gameLinkNew = `/project.html?url=${newUrl}`;
             }
 
             const gameItem = document.createElement('div');
@@ -121,13 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const gameTitle = document.createElement('h3');
             gameTitle.textContent = gameName;
 
-            const gameLinkNew = document.createElement('a');
-            gameLinkNew.href = gameUrl.includes('#game=') ? `/project.html?url=https://${gamedomain}/flash/${extractFlashGameURL(gameUrl)}` : gameUrl;
+            const gameLinkElement = document.createElement('a');
+            gameLinkElement.href = gameLinkNew;
 
-            gameLinkNew.appendChild(gameImage);
-            gameLinkNew.appendChild(gameTitle);
+            gameLinkElement.appendChild(gameImage);
+            gameLinkElement.appendChild(gameTitle);
 
-            gameItem.appendChild(gameLinkNew);
+            gameItem.appendChild(gameLinkElement);
             gameList.appendChild(gameItem);
         });
     }
