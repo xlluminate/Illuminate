@@ -268,35 +268,32 @@ a:hover {
     margin: 20px 0;
 }
 
-/* Styles for the theme selection label */
 .theme-container label {
     font-size: 18px;
     color: #333333;
     margin-right: 10px;
 }
 
-/* Styles for the theme selection dropdown */
 .theme-container select {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #cccccc;
-    background-color: #f5f5f5; /* Light grey background */
+    background-color: #f5f5f5; 
     color: #333333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Styles for the theme selection dropdown on hover */
 .theme-container select:hover {
-    background-color: #e8e8e8; /* Slightly darker grey on hover */
+    background-color: #e8e8e8; 
 }
 
 .domain-selection {
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #333;
+    border: 1px solid #444;
     border-radius: 5px;
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     max-width: 400px;
     text-align: center;
 }
@@ -306,33 +303,55 @@ a:hover {
     color: #ddd;
 }
 
-.domain-selection select, 
-.domain-selection input[type="text"], 
-.domain-selection button {
+.domain-selection select {
     display: block;
     width: calc(100% - 24px);
     padding: 10px;
     margin: 10px auto;
-    border: 1px solid #333;
+    border: 1px solid #444;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #2e2e2e;
+    background-color: #3e3e3e;
+    color: #ddd;
+}
+
+#custom-domain-input {
+    display: none;
+    margin-top: 10px;
+}
+
+#custom-domain-input label {
+    display: block;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+#custom-domain-input input {
+    display: block;
+    width: calc(100% - 24px); 
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #3e3e3e;
     color: #ddd;
 }
 
 .domain-selection button {
-    background-color: #ffeb3b; 
+    background-color: #ffeb3b;
     color: #333;
     cursor: pointer;
     transition: background-color 0.3s;
     width: fit-content;
     padding: 10px 20px;
-    margin: 10px auto;
-    border: 1px solid #333;
+    margin: 20px auto 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
 }
 
 .domain-selection button:hover {
-    background-color: #fdd835; 
+    background-color: #fdd835;
 }
 
 .domain-selection .info-link {
