@@ -1,31 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const domainSelect = document.getElementById('domain-select');
-    const customDomainInput = document.getElementById('custom-domain-input');
-    const customDomainField = document.getElementById('custom-domain');
+function handleDomainSelectChange() {
+    var domainSelect = document.getElementById('domain-select');
+    var customDomainInput = document.getElementById('custom-domain-input');
 
-    domainSelect.addEventListener('change', () => {
-        if (domainSelect.value === 'custom') {
-            customDomainInput.style.display = 'block';
-        } else {
-            customDomainInput.style.display = 'none';
-        }
-    });
-});
+    if (domainSelect.value === 'custom') {
+        customDomainInput.style.display = 'block';
+    } else {
+        customDomainInput.style.display = 'none';
+    }
+}
 
 function setGameDomain() {
-    const domainSelect = document.getElementById('domain-select');
-    const customDomainField = document.getElementById('custom-domain');
-    let domain = domainSelect.value;
+    var domainSelect = document.getElementById('domain-select');
+    var customDomainInput = document.getElementById('custom-domain');
 
-    if (domain === 'custom') {
-        domain = customDomainField.value.trim();
-        if (domain === '') {
-            alert('Please enter a custom domain.');
-            return;
-        }
+    var selectedDomain = domainSelect.value;
+    if (selectedDomain === 'custom') {
+        selectedDomain = customDomainInput.value.trim();
     }
 
-    setCookie('gamedomain', domain, 365);
-    alert(`Game domain set to: ${domain}`);
-    window.location.reload(); // reload
+    if (selectedDomain) {
+        setCookie('gamedomain', selectedDomain, 365);
+        alert('Game domain set to: ' + selectedDomain);
+    } else {
+        alert('Please enter a valid domain.');
+    }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var savedDomain = getCookie('gamedomain');
+    if (!savedDomain) {
+        setCookie('gamedomain', 'projectassets.teacherease.net', 365);
+    }
+
+    var domainSelect = document.getElementById('domain-select');
+    if (domainSelect) {
+        domainSelect.value = savedDomain || 'projectassets.teacherease.net';
+    }
+});
