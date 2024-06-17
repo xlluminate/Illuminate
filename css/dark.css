@@ -298,20 +298,19 @@ a:hover {
     border-radius: 5px;
     background-color: #1e1e1e;
     max-width: 400px;
+    text-align: center;
 }
-
 
 .domain-selection h2 {
     margin-top: 0;
     color: #ddd;
 }
 
-
 .domain-selection select, 
 .domain-selection input[type="text"], 
 .domain-selection button {
     display: block;
-    width: calc(100% - 24px); /* ur too fat */
+    width: calc(100% - 24px);
     padding: 10px;
     margin: 10px auto;
     border: 1px solid #333;
@@ -329,10 +328,11 @@ a:hover {
     width: fit-content;
     padding: 10px 20px;
     margin: 10px auto;
+    border: 1px solid #333;
 }
 
 .domain-selection button:hover {
-    background-color: #fdd835;
+    background-color: #fdd835; 
 }
 
 .domain-selection .info-link {
