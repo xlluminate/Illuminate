@@ -334,3 +334,12 @@ a:hover {
 .domain-selection button:hover {
     background-color: #fdd835;
 }
+
+.domain-selection .info-link {
+    color: #66b2ff;
+    text-decoration: none;
+}
+
+.domain-selection .info-link:hover {
+    text-decoration: underline;
+}
