@@ -54,3 +54,8 @@ function applyTheme(theme) {
         console.error('Theme link element not found');
     }
 }
+
+var gameServer = getCookie('gamedomain');
+if (gameServer == null) {
+    setCookie('gamedomain', 'projectassets.teacherease.net', 365);
+}
