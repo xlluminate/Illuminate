@@ -7,6 +7,7 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(";");
@@ -17,7 +18,6 @@ function getCookie(name) {
     }
     return null;
 }
-
 
 function handleDomainSelectChange() {
     var domainSelect = document.getElementById('domain-select');
@@ -42,6 +42,7 @@ function setGameDomain() {
     if (selectedDomain) {
         setCookie('gamedomain', selectedDomain, 365);
         alert('Game domain set to: ' + selectedDomain);
+        location.reload(); // reload
     } else {
         alert('Please enter a valid domain.');
     }
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var domainSelect = document.getElementById('domain-select');
     if (domainSelect) {
-        domainSelect.value = savedDomain || 'projectassets.teacherease.net';
+        domainSelect.value = savedDomain || 'default';
+        handleDomainSelectChange();
     }
 });
