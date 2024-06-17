@@ -323,3 +323,45 @@ a:hover {
     color: #666666; /* Darker grey text color on hover */
     border-color: #cccccc; /* Darker grey border color on hover */
 }
+/* Container for the domain selection interface */
+.domain-selection {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Heading for the domain selection section */
+.domain-selection h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Styles for the select element and input field */
+.domain-selection select, 
+.domain-selection input[type="text"], 
+.domain-selection button {
+    display: block;
+    width: calc(100% - 24px); /* Adjusting width to fit padding */
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Specific styles for the button */
+.domain-selection button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the button */
+.domain-selection button:hover {
+    background-color: #0056b3;
+}
