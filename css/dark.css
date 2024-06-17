@@ -292,9 +292,9 @@ a:hover {
 .domain-selection {
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #444;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #2e2e2e;
+    background-color: #fff;
     max-width: 400px;
     text-align: center;
 }
@@ -302,46 +302,22 @@ a:hover {
 /* Heading for the domain selection section */
 .domain-selection h2 {
     margin-top: 0;
-    color: #ddd;
+    color: #333;
 }
 
-/* Styles for the select element */
-.domain-selection select {
+/* Styles for the select element and input field */
+.domain-selection select, 
+.domain-selection input[type="text"], 
+.domain-selection button {
     display: block;
     width: calc(100% - 24px); /* Adjusting width to fit padding */
     padding: 10px;
     margin: 10px auto;
-    border: 1px solid #444;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #3e3e3e;
-    color: #ddd;
-}
-
-/* Styles for the custom domain input container */
-#custom-domain-input {
-    display: none;
-    margin-top: 10px;
-}
-
-/* Label for custom domain input */
-#custom-domain-input label {
-    display: block;
-    color: #ddd;
-    margin-bottom: 5px;
-}
-
-/* Custom domain input field */
-#custom-domain-input input {
-    display: block;
-    width: calc(100% - 24px); /* Adjusting width to fit padding */
-    padding: 10px;
-    margin: 0 auto;
-    border: 1px solid #444;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #3e3e3e;
-    color: #ddd;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 /* Specific styles for the button */
@@ -352,9 +328,8 @@ a:hover {
     transition: background-color 0.3s;
     width: fit-content;
     padding: 10px 20px;
-    margin: 20px auto 10px;
-    border: 1px solid #444;
-    border-radius: 5px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
 }
 
 /* Hover effect for the button */
@@ -364,10 +339,8 @@ a:hover {
 
 /* Styles for the info link */
 .domain-selection .info-link {
-    color: #66b2ff;
+    color: #007bff;
     text-decoration: none;
-    display: block; /* Display as block to position correctly */
-    margin-top: 10px; /* Add space above the link */
 }
 
 /* Hover effect for the info link */
