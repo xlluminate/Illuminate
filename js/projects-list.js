@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Flash game
                 const gameParam = extractFlashGameURL(gameUrl);
                 thumbnail = `https://${gamedomain}/flash/images/${gameParam}.png`;
-                gameLinkNew = `/project.html?url=https://${gamedomain}/flash/${gameParam}`;
+                gameLinkNew = `/project.html?url=https://${gamedomain}/flash/#game=${gameParam}`;
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
