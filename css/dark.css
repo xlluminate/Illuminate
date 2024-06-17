@@ -288,6 +288,7 @@ a:hover {
     background-color: #e8e8e8; 
 }
 
+/* Container for the domain selection interface */
 .domain-selection {
     margin: 20px auto;
     padding: 20px;
@@ -298,14 +299,16 @@ a:hover {
     text-align: center;
 }
 
+/* Heading for the domain selection section */
 .domain-selection h2 {
     margin-top: 0;
     color: #ddd;
 }
 
+/* Styles for the select element */
 .domain-selection select {
     display: block;
-    width: calc(100% - 24px);
+    width: calc(100% - 24px); /* Adjusting width to fit padding */
     padding: 10px;
     margin: 10px auto;
     border: 1px solid #444;
@@ -315,20 +318,23 @@ a:hover {
     color: #ddd;
 }
 
+/* Styles for the custom domain input container */
 #custom-domain-input {
     display: none;
     margin-top: 10px;
 }
 
+/* Label for custom domain input */
 #custom-domain-input label {
     display: block;
     color: #ddd;
     margin-bottom: 5px;
 }
 
+/* Custom domain input field */
 #custom-domain-input input {
     display: block;
-    width: calc(100% - 24px); 
+    width: calc(100% - 24px); /* Adjusting width to fit padding */
     padding: 10px;
     margin: 0 auto;
     border: 1px solid #444;
@@ -338,8 +344,9 @@ a:hover {
     color: #ddd;
 }
 
+/* Specific styles for the button */
 .domain-selection button {
-    background-color: #ffeb3b;
+    background-color: #ffeb3b; /* Light yellow */
     color: #333;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -350,15 +357,20 @@ a:hover {
     border-radius: 5px;
 }
 
+/* Hover effect for the button */
 .domain-selection button:hover {
-    background-color: #fdd835;
+    background-color: #fdd835; /* Slightly darker yellow */
 }
 
+/* Styles for the info link */
 .domain-selection .info-link {
     color: #66b2ff;
     text-decoration: none;
+    display: block; /* Display as block to position correctly */
+    margin-top: 10px; /* Add space above the link */
 }
 
+/* Hover effect for the info link */
 .domain-selection .info-link:hover {
     text-decoration: underline;
 }
