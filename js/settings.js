@@ -70,9 +70,9 @@ function setFullscreenCookie() {
     var autoFullscreen = getCookie('autoFullscreen');
     if (autoFullscreen == null) {
         setCookie('autoFullscreen', 'true', 30);
-    } else if (autoFullscreen == false) {
+    } else if (autoFullscreen == 'false') {
         setCookie('autoFullscreen', 'true', 30);
-    } else if (autoFullscreen == true) {
+    } else if (autoFullscreen == 'true') {
         setCookie('autoFullscreen', 'false', 30);
     }
 }
