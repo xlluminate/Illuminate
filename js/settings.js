@@ -65,3 +65,14 @@ function loadData() {
     var url = 'https://' + gameServer + '/minecraftgoldfish3/more/data/load.html';
     window.open(url);
 }
+
+function setFullscreenCookie() {
+    var autoFullscreen = getCookie('autoFullscreen');
+    if (autoFullscreen == null) {
+        setCookie('autoFullscreen', 'true', 30);
+    } else if (autoFullscreen == false) {
+        setCookie('autoFullscreen', 'true', 30);
+    } else if (autoFullscreen == true) {
+        setCookie('autoFullscreen', 'false', 30);
+    }
+}
