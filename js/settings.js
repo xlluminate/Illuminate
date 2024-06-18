@@ -76,3 +76,6 @@ function setFullscreenCookie() {
         setCookie('autoFullscreen', 'false', 30);
     }
 }
+if ((document.getElementById('fullscreen').checked == false) && (getCookie('autoFullscreen'); == true)) {
+    document.getElementById('fullscreen').checked == true;
+}
