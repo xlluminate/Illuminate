@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bookmarklets | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="../../projects.html">Games</a></li>
+                        <li><a href="../../proxies.html">Proxies</a></li>
+                        <li><a href="../../apps.html">Apps</a></li>
+                        <li><a href="../../cheats/index.html">Cheats</a></li>
+                        <li><a href="../../chat.html">Chat</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../review.html">Feedback</a></li>
+                        <li><a href="../../settings.html">Settings</a></li>
+                        <li><a href="../../other/index.html">Other</a></li>
+                        <li><a href="../../about-blank.html">about:blank</a></li>
+                    </ul>
+                </nav>
+                <h1>Bookmarklets</h1>
+                <p>Check out more bookmarklets in the <a href="../../cheats/index.html">cheats &amp; hacks</a> page.</p>
+            </header>
+            <br />
+            <h2>How to add bookmarklets:</h2>
+            <p>On this webpage, click the bookmark button, then a box will appear. Click "more". Where it says URL, copy and paste the javascript bookmarklet code. Name the bookmarklet, and then click save. Your bookmarklet will appear with other bookmarks and bookmarklets.</p>
+            <p>Bookmarklets will not work on browser system pages, like the new tab page.</p>
+            <h2>Bookmarklet to cloak Illuminate:</h2>
+            <p>This bookmarklet will cloak <a href="../../redirect.html?url=https://teacherease.net&type=internal">teacherease.net</a> in an about:blank page. It is open source in <a href="../../redirect.html?url=https://github.com/xlluminate/bookmarklet&type=external">this</a> repository.</p>
+            <p>Note: This will also work for most other webpages as well. Replace "https://teacherease.net" with another website and it will usually work (except for the sites that cannot be embedded).</p>
+            <p>
+                javascript: (function () {var url = "https://teacherease.net"; var urlobj = new
+                window. URL (window. location.href); win = window.open(); win.document.body.style.margin = "0";
+                win. document.body.style.height = "100h"; var iframe = win. document. createElement("iframe"); iframe.style.border =
+                "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy
+                = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url. toString(); win.document.body.appenaChild (iframe);
+                var script = win. document.createElement("script"); win.document.body.appendChild(script); 5)();
+            </p>
+            <h2>About:blank Embedder</h2>
+            <p>This bookmarklet does the same thing as the one above, but it allows you to enter a custom URL.</p>
+            <p>javascript: (function () {var url = prompt("Paste a link to be embedded into an about:blank page. Include https://.", "https://teacherease.net"); var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); })();</p>
+            <h2>Edit +</h2>
+            <p>This bookmarklet will allow you to edit a webpage just by clicking on different elements on the page. To close the bookmarklet, refresh the page or just click on the bookmarklet again.</p>
+            <p>javascript:if(document.body.contentEditable != 'true')void(document.body.contentEditable = 'true');else void(document.body.contentEditable = 'false');</p>
+            <h2>Google Translate</h2>
+            <p>This bookmarklet will allow you to translate the webpage into a different language.</p>
+            <p>javascript:var url="https://translate.google.com/translate?u=";var href=encodeURI(location.href);var lang="?tl=en";open(url+href+lang);</p>
+            <h2>Youtube Video Information</h2>
+            <p>Allows you to view extra information about a youtube video (including dislikes).</p>
+            <p>javascript:var api="https://returnyoutubedislikeapi.com/votes?videoId=";var url=location.search.split("v=")[1].split("&")[0];if(location.hostname==="www.youtube.com"){open(api+url);}else if(location.hostname==="youtu.be"){open(api+url);}else if(location.hostname==="www.youtube-nocookie.com"){open(api+url);}</p>
+            <div class="spacer"></div>
+            <p>More bookmarklets are coming soon. You can request bookmarklets to be added by <a href="../../contact.html">contacting us</a>. Just request the bookmarklet by giving a name, description, and if you have the javascript code, add that as well.</p>
+            <div class="spacer"></div>
+        </div>
+        <div class="footer"><a href="/">Back to Homepage</a></div>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
