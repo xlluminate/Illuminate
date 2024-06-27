@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // HTML5 game
                 const gameLink = new URL(gameUrl).searchParams.get('url');
-                const newUrl = gameLink.replace(/https:\/\/[^/]+/, `https://${gamedomain}`);
+                const newUrl = `https://${gamedomain}${gameLink}`; //gameLink.replace(/https:\/\/[^/]+/, `https://${gamedomain}`);
                 thumbnail = newUrl.replace(/index\.htm(l)?$/, 'cover.png');
                 gameLinkNew = `/project.html?url=${newUrl}`;
             }
