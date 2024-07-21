@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Project | Illuminate</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #game-container {
+            width: 100%; 
+            height: 100%; 
+            position: fixed;
+        }
+        #fullscreen-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        #fullscreen-btn:hover {
+            cursor: pointer;
+        }
+        .backbutton {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #efefef;
+            color: #000000;
+            padding: 10px;
+            font-size: 16px;
+            position: fixed; /* Change to fixed positioning */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Remove left, right, and bottom properties */
+            box-shadow: 0 0 12px #cccccc;
+        }
+        a {
+            color: #007dcc;
+            text-decoration: none;
+            font-family: Arial;
+        }
+        a:hover {
+            color: #016aad;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- iframe -->
+    <div id="game-container" draggable="false"></div>
+    <script src="/js/project.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
