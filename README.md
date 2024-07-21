@@ -13,7 +13,7 @@ If you're deploying to Github Pages, rename the repo to (yourusername).github.io
 
 Most web hosts not listed here are still supported by Illuminate. If you're forking this repo, please give it a star!
 ## Links
-Here are the current offical links for Illuminate:
+Here are the current official links for Illuminate:
 
 * https://teacherease.net
 
