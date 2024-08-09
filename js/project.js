@@ -111,24 +111,3 @@ function cloak() {
     win.document.body.appendChild(script);
 }
 
-function checkIframeStatus(iframe) {
-    try {
-        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        var assetsCheck = iframeDocument.getElementById('assets-check');
-
-        if (!assetsCheck) {
-            // not found
-            alert('The assets site appears to be down. Please go to the games page to change the game domain.');
-        }
-    } catch (e) {
-        // error
-        alert('The assets site appears to be down. Please go to the games page to change the game domain.');
-    }
-}
-
-window.onload = function() {
-    var gameIframe = document.getElementById('game-container');
-    gameIframe.onload = function() {
-        checkIframeStatus(gameIframe);
-    };
-};
