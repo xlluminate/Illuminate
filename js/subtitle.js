@@ -270,6 +270,7 @@ say[271] = "Dream fakes his speedruns no cap";
 say[272] = "hi!";
 say[273] = "Now with 156 Games!"
 say[274] = "f in the chat"
+say[275] = "Don't forget to save your data!"
 
 // pick a random greeting
 var howmany = say.length;
