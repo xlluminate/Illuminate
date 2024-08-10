@@ -25,7 +25,7 @@ Here are the current official links for Illuminate:
 
 * https://illuminating.netlify.app
 
-* https::/illuminating.onrender.com
+* https://illuminating.onrender.com
   
 
 ## Support
