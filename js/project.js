@@ -108,6 +108,7 @@ function cloak() {
     iframe.src = cloakURL;
     win.document.body.appendChild(iframe);
     var script = win.document.createElement("script");
+    script.src = "/js/main.js";
     win.document.body.appendChild(script);
 }
 
