@@ -27,7 +27,7 @@ Here are the current official links for Illuminate:
 
 * https://illuminating.onrender.com
   
-
+* https://illuminating.surge.sh
 ## Support
 For support relating to the site, please contact support@teacherease.net, or using the google forms provided on the site. 
 ## Assets
