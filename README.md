@@ -26,6 +26,10 @@ Here are the current official links for Illuminate:
 * https://illuminating.netlify.app
 
 * https://illuminating.onrender.com
+
+* https://goilluminating.web.app
+
+* https://goilluminating.firebaseapp.com
   
 * https://illuminating.surge.sh
 ## Support
