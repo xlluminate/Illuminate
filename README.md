@@ -1,5 +1,8 @@
 ## Illuminate
 A weekly updated unblocked games website with multiple features, including proxies, apps, and more!
+## Deploy using BYOD
+Follow instructions here:
+https://docs.google.com/document/u/0/d/1-oq5FYTt-ZnClJ0ZlUjVplnCGpiaSPgwSBOflxfY9j0/
 ## Deploy to a web service
 [![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template?template=https://github.com/xlluminate/Illuminate)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/xlluminate/Illuminate)
