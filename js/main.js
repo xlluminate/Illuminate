@@ -79,5 +79,3 @@ function insertads() {
     script.crossOrigin = "anonymous";
     document.head.appendChild(script);
 }
-
-insertads();
