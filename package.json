@@ -1,7 +1,7 @@
 {
   "name": "illuminate",
   "description": "Illuminate",
-  "version": "1.5.5",
+  "version": "1.6",
   "scripts": {
     "build": "yarn",
     "start": "yarn run"
