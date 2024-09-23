@@ -111,4 +111,11 @@ function cloak() {
     script.src = "/js/main.js";
     win.document.body.appendChild(script);
 }
+function oGD() {
+    var gameURL = extractGameURL();
+    if (gameURL) {
+        window.open(gameURL, '_blank');
+    }
+}
 
+document.getElementById('direct-link-btn').addEventListener('click', oGD);
