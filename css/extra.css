@@ -1,0 +1,73 @@
+input {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0; /* Slightly darker grey for inputs */
+    color: #333333;
+    background-color: #ffffcc; /* Pale yellow for inputs */
+    padding: 0 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+}
+
+textarea {
+    width: 400px;
+    height: 40px;
+    border-radius: 0px;
+    border: none;
+    color: #333333;
+    background-color: #ffffcc; /* Pale yellow for textareas */
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-family: Arial;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #ffff99; /* Lighter shade of yellow on focus */
+}
+
+textarea:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    transition: background-color 0.3s ease;
+}
+
+select {
+    display: block;
+    width: 20%; 
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+button {
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ffffcc; /* Pale yellow for buttons */
+    color: #333333;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffff99; /* Lighter shade of yellow on hover */
+    color: #666666; /* Darker grey text color on hover */
+}
