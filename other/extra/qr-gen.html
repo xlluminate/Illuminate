@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QR Code Generator | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/extra.css">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="../../projects.html">Games</a></li>
+                        <li><a href="../../proxies.html">Proxies</a></li>
+                        <li><a href="../../apps.html">Apps</a></li>
+                        <li><a href="../../cheats.html">Cheats</a></li>
+                        <li><a href="../../chat.html">Chat</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../review.html">Feedback</a></li>
+                        <li><a href="../../settings.html">Settings</a></li>
+                        <li><a href="../../other/index.html">Other</a></li>
+                        <li><a href="../../about-blank">about:blank</a></li>
+                    </ul>
+                </nav>
+                <h1>QR Code Generator</h1>
+                <p>Generates a QR code. Right-click the QR code to save it as an image.</p>
+            </header>
+            <br />
+            <div>
+                <label for="text">Enter Text:</label><br />
+                <textarea id="text" rows="3">https://teacherease.net</textarea><br />
+                <label for="type">Type Number:</label><br />
+                <input type="number" id="type" value="4" /><br />
+                <label for="error">Error Correction Level:</label>
+                <select id="error">
+                    <option value="L">Low</option>
+                    <option value="M">Medium</option>
+                    <option value="Q">Quartile</option>
+                    <option value="H">High</option>
+                </select>
+            </div>
+            <button onclick="generate()">Generate</button>
+            <div id="placeHolder"></div>
+            <p>Credits to <a href="https://github.com/kazuhikoarase/qrcode-generator/tree/master/js">https://github.com/kazuhikoarase/qrcode-generator/tree/master/js</a>.</p>
+        </div>
+        <div class="spacer"></div><div class="spacer"></div>
+        <div class="footer"><a href="/">Back to Homepage</a></div>
+        <script type="text/javascript" src="/js/qrcode.js"></script>
+        <script>
+            function generate() {
+                var data = document.getElementById('text').value;
+                var typeNumber = document.getElementById('type').value;
+                var errorCorrectionLevel = document.getElementById('error').value;
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(data);
+                qr.make();
+                document.getElementById('placeHolder').innerHTML = qr.createImgTag();
+            }
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

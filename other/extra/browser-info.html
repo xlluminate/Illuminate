@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Browser Info | Illuminate</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link id="theme-link" rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/extra.css">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3317735030374126" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="../../projects.html">Games</a></li>
+                        <li><a href="../../proxies.html">Proxies</a></li>
+                        <li><a href="../../apps.html">Apps</a></li>
+                        <li><a href="../../cheats.html">Cheats</a></li>
+                        <li><a href="../../chat.html">Chat</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../review.html">Feedback</a></li>
+                        <li><a href="../../settings.html">Settings</a></li>
+                        <li><a href="../../other/index.html">Other</a></li>
+                        <li><a href="../../about-blank">about:blank</a></li>
+                    </ul>
+                </nav>
+                <h1>Browser Information</h1>
+                <p>Gets your info, including your IP address.</p>
+                <p>Information from <a href="https://ipgeolocation.abstractapi.com/">https://ipgeolocation.abstractapi.com/</a>.</p>
+            </header>
+            <br />
+            <p id="info"></p>
+        </div>
+        <div class="spacer"></div><div class="spacer"></div>
+        <div class="footer"><a href="/">Back to Homepage</a></div>
+        <script>
+            var info = {};
+            fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c")
+                .then((response) => response.json())
+                .then((data) => {
+                info = {
+                    ip_address: data.ip_address,
+                    city: data.city,
+                    city_geoname_id: data.city_geoname_id,
+                    region: data.region,
+                    region_iso_code: data.region_iso_code,
+                    region_geoname_id: data.region_geoname_id,
+                    postal_code: data.postal_code,
+                    country: data.country,
+                    country_code: data.country_code,
+                    country_geoname_id: data.country_geoname_id,
+                    country_is_eu: data.country_is_eu,
+                    continent: data.continent,
+                    continent_code: data.continent_code,
+                    continent_geoname_id: data.continent_geoname_id,
+                    longitude: data.longitude,
+                    latitude: data.latitude,
+                    security: data.security,
+                    timezone: data.timezone,
+                    flag: data.flag,
+                    currency: data.currency,
+                    connection: data.connection,
+                    userAgent: navigator.userAgent,
+                    windowLocation: window.location.href,
+                    windowProp: Object.keys(window).length,
+                    windowWidth: window.innerWidth,
+                    windowHeight: window.innerHeight,
+                    windowRatio: window.innerWidth / window.innerHeight,
+                    screenWidth: window.screen.availWidth,
+                    screenHeight: window.screen.availHeight,
+                    screenRatio: window.screen.availWidth / window.screen.availHeight,
+                    DPI: window.devicePixelRatio,
+                    colorDepth: window.screen.colorDepth,
+                    orientation: window.screen.orientation.type,
+                    orientationAngle: window.screen.orientation.angle,
+                    os: navigator.platform,
+                    threads: navigator.hardwareConcurrency,
+                    memory: navigator.deviceMemory,
+                    systemLanguages: navigator.languages.join(", "),
+                    languages: navigator.language,
+                };
+                document.getElementById("info").innerText = JSON.stringify(info, null, 1);
+            })
+            .catch((error) => console.error(error));
+        </script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
