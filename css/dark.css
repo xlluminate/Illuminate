@@ -260,8 +260,8 @@ a:hover {
 .game-item {
     background-color: #ffffcc; /* Light yellow background */
     border-radius: 10px;
-    box-shadow: 0 2px 4
-
+    box-shadow: 0 2px 4;
+}
 
 .theme-container {
     text-align: center;
