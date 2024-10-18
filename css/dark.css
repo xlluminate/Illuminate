@@ -270,7 +270,7 @@ a:hover {
 
 .theme-container label {
     font-size: 18px;
-    color: #333333;
+    color: #f5f5f5;
     margin-right: 10px;
 }
 
@@ -297,6 +297,10 @@ a:hover {
     background-color: #fff;
     max-width: 400px;
     text-align: center;
+}
+
+.domain-selection label {
+    color: #333333;
 }
 
 /* Heading for the domain selection section */
