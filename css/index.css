@@ -137,7 +137,7 @@ a:hover {
     height: 180px;
 }
 .small-spacer {
-    height: 75px;
+    height: 70px;
 }
 .search-container {
   display: flex;
@@ -207,17 +207,17 @@ a:hover {
 }
 .github-link {
     position: fixed;
-    bottom: calc(10px + 15px); /* Adjust based on the margin of the "Get Started" button */
+    bottom: calc(10px + 15px); /* based on the margin of the "Get Started" button */
     right: 20px;
-    width: 40px; /* Adjust the size as needed */
-    height: 40px; /* Adjust the size as needed */
+    width: 40px; 
+    height: 40px; 
     border-radius: 50%;
     background-color: #000; /* Black background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Ensure the logo is above other content */
+    z-index: 1; /* might need to adjust this later */
 }
 
 .github-link img {
